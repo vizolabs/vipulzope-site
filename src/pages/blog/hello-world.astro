@@ -2,57 +2,21 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Hello World | Vipul Zope" description="My first blog post on my new personal website.">
-  <article class="max-w-3xl mx-auto px-6 py-16">
-    <a href="/blog" class="text-[var(--color-accent)] hover:underline text-sm mb-6 inline-block">&larr; Back to Blog</a>
+<Layout title="hello world | Vipul Zope" description="my first blog post.">
+  <article class="max-w-[650px] mx-auto px-6 py-12">
+    <a href="/blog" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] no-underline hover:underline">&larr; back</a>
 
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold mb-3">Hello World</h1>
-      <div class="flex items-center gap-4 text-sm text-[var(--color-text-muted)]">
-        <time>June 29, 2026</time>
-        <div class="flex gap-2">
-          <span class="px-2 py-0.5 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded text-xs">intro</span>
-          <span class="px-2 py-0.5 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded text-xs">web</span>
-        </div>
-      </div>
+    <header class="mt-4 mb-8">
+      <h1 class="text-2xl font-bold mb-2">hello world</h1>
+      <time class="text-sm text-[var(--color-text-muted)]">June 29, 2026</time>
     </header>
 
-    <div class="prose prose-invert max-w-none">
-      <p>Welcome to my blog! This is my first post on <strong>vipulzope.in</strong> — a site I built to have my own little corner of the internet.</p>
+    <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
+      <p>welcome to my blog. this is my first post on <strong>vipulzope.in</strong> — built with Astro, hosted on GitHub Pages.</p>
 
-      <h2>Why I Built This</h2>
-      <p>I've always wanted a personal website, but kept putting it off. Today I finally sat down and made it happen. I used:</p>
-      <ul>
-        <li><strong>Astro</strong> — fast, modern, outputs static HTML</li>
-        <li><strong>Tailwind CSS</strong> — for styling without writing tons of custom CSS</li>
-        <li><strong>GitHub Pages</strong> — free hosting, easy deployment</li>
-        <li><strong>Formspree</strong> — for the contact form (no backend needed)</li>
-      </ul>
+      <p>i built this site to have my own corner of the internet. a place to write, share thoughts, and document the journey.</p>
 
-      <h2>What's Coming</h2>
-      <p>I plan to write about:</p>
-      <ol>
-        <li>Things I'm building</li>
-        <li>Tech I'm learning</li>
-        <li>Problems I've solved</li>
-        <li>Random thoughts on code and life</li>
-      </ol>
-
-      <h2>A Code Block for Good Measure</h2>
-      <pre><code>const greeting = "Hello, World!";{'\n'}console.log(greeting);</code></pre>
-
-      <p>Stay tuned for more posts. Thanks for reading!</p>
+      <p>more coming soon.</p>
     </div>
   </article>
 </Layout>
-
-<style>
-  .prose :global(h2) { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
-  .prose :global(p) { margin-bottom: 1rem; line-height: 1.75; color: var(--color-text-muted); }
-  .prose :global(strong) { color: var(--color-text); }
-  .prose :global(ul) { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-text-muted); }
-  .prose :global(ol) { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--color-text-muted); }
-  .prose :global(li) { margin-bottom: 0.25rem; }
-  .prose :global(pre) { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem; overflow-x: auto; margin-bottom: 1.5rem; }
-  .prose :global(code) { background: var(--color-bg-card); padding: 0.2em 0.4em; border-radius: 0.25rem; font-size: 0.875em; }
-</style>

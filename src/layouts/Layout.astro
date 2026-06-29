@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Personal website of Vipul Zope' } = Astro.props;
+const { title, description = 'Vipul Zope — operator and systems builder' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +19,9 @@ const { title, description = 'Personal website of Vipul Zope' } = Astro.props;
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
   <Header />
-  <main class="flex-1">
+  <main>
     <slot />
   </main>
   <Footer />

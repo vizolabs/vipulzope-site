@@ -1,86 +1,86 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const posts = [
+  {
+    url: '/blog/hello-world',
+    title: 'hello world',
+    date: 'Jun 29, 2026',
+  },
+];
+
+const links = [
+  { label: 'X', url: 'https://x.com/zope_vipul' },
+  { label: 'GitHub', url: 'https://github.com/vizolabs' },
+  { label: 'LinkedIn', url: 'https://linkedin.com/in/vipulzope' },
+  { label: 'cal.com/vipulzope', url: 'https://cal.com/vipulzope' },
+];
 ---
 
-<Layout title="Vipul Zope | Personal Website">
-  <!-- Hero Section -->
-  <section class="max-w-4xl mx-auto px-6 pt-20 pb-16">
-    <div class="flex flex-col items-center text-center gap-6">
-      <div class="w-28 h-28 rounded-full bg-[var(--color-bg-card)] border-2 border-[var(--color-accent)] flex items-center justify-center text-4xl font-bold text-[var(--color-accent)]">
-        VZ
-      </div>
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">
-          Hi, I'm <span class="text-[var(--color-accent)]">Vipul Zope</span>
-        </h1>
-        <p class="text-lg text-[var(--color-text-muted)] max-w-xl mx-auto">
-          Developer, creator, and lifelong learner. Building things that matter.
-        </p>
-      </div>
-      <div class="flex gap-4 mt-4">
-        <a href="/projects" class="px-6 py-3 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white rounded-lg font-medium transition-colors">
-          View Projects
-        </a>
-        <a href="/contact" class="px-6 py-3 border border-[var(--color-border)] hover:border-[var(--color-accent)] text-[var(--color-text)] rounded-lg font-medium transition-colors">
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section>
+<Layout title="Vipul Zope">
+  <div class="max-w-[650px] mx-auto px-6 py-12">
 
-  <!-- About Preview -->
-  <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-2xl font-bold mb-8 text-center">What I Do</h2>
-    <div class="grid sm:grid-cols-3 gap-6">
-      <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)] transition-colors">
-        <div class="text-3xl mb-4">💻</div>
-        <h3 class="font-semibold mb-2">Development</h3>
-        <p class="text-sm text-[var(--color-text-muted)]">Building web applications and tools with modern technologies.</p>
-      </div>
-      <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)] transition-colors">
-        <div class="text-3xl mb-4">🎨</div>
-        <h3 class="font-semibold mb-2">Design</h3>
-        <p class="text-sm text-[var(--color-text-muted)]">Creating clean, intuitive interfaces that users love.</p>
-      </div>
-      <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)] transition-colors">
-        <div class="text-3xl mb-4">📝</div>
-        <h3 class="font-semibold mb-2">Writing</h3>
-        <p class="text-sm text-[var(--color-text-muted)]">Sharing thoughts on tech, code, and the journey of building.</p>
-      </div>
-    </div>
-  </section>
+    <h1 class="text-2xl font-bold mb-2">hey! i'm vipul.</h1>
 
-  <!-- Recent Projects Preview -->
-  <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-2xl font-bold mb-8 text-center">Recent Projects</h2>
-    <div class="grid sm:grid-cols-2 gap-6">
-      <a href="/projects" class="group bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)] transition-colors">
-        <h3 class="font-semibold mb-2 group-hover:text-[var(--color-accent)] transition-colors">Project Alpha</h3>
-        <p class="text-sm text-[var(--color-text-muted)] mb-4">A full-stack web application built with modern tools.</p>
-        <div class="flex gap-2 flex-wrap">
-          <span class="text-xs px-2 py-1 bg-[var(--color-bg)] rounded-md text-[var(--color-accent)]">Astro</span>
-          <span class="text-xs px-2 py-1 bg-[var(--color-bg)] rounded-md text-[var(--color-accent)]">TypeScript</span>
-        </div>
-      </a>
-      <a href="/projects" class="group bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)] transition-colors">
-        <h3 class="font-semibold mb-2 group-hover:text-[var(--color-accent)] transition-colors">Project Beta</h3>
-        <p class="text-sm text-[var(--color-text-muted)] mb-4">An open-source CLI tool for developers.</p>
-        <div class="flex gap-2 flex-wrap">
-          <span class="text-xs px-2 py-1 bg-[var(--color-bg)] rounded-md text-[var(--color-accent)]">Node.js</span>
-          <span class="text-xs px-2 py-1 bg-[var(--color-bg)] rounded-md text-[var(--color-accent)]">CLI</span>
-        </div>
-      </a>
-    </div>
-  </section>
+    <p class="text-[var(--color-text-muted)] mb-8">
+      i'm a 22-year-old operator and systems builder. i believe the next decade of Physical AI and Robotics will be won by those who control the Data Supply Chain.
+    </p>
 
-  <!-- CTA -->
-  <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-    <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl p-10">
-      <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
-      <p class="text-[var(--color-text-muted)] mb-6">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
-      <a href="/contact" class="inline-block px-6 py-3 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white rounded-lg font-medium transition-colors">
-        Send a Message
-      </a>
-    </div>
-  </section>
+    <section class="mb-10">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Problems I Find Interesting</h2>
+      <ul class="space-y-3 text-[var(--color-text)]">
+        <li><strong>industrial data pipelines (B2B):</strong> securing proprietary, high-fidelity tactile data by integrating multimodal sensors into heavy manufacturing and factory workflows.</li>
+        <li><strong>decentralized data scaling:</strong> removing the entropy from high-volume, community-led gig-worker networks to capture infinite real-world spatial variability via mobile head-mounts.</li>
+        <li><strong>sim-to-real ecosystems:</strong> designing incentivized digital platforms where massive communities bridge the gap between simulated tasks and physical ground-truth.</li>
+        <li><strong>operationalized intelligence:</strong> the pure logistics of managing a multi-tiered supply chain—turning chaotic human movement across factories and streets into structured robotic policies.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Before Now</h2>
+      <ul class="space-y-3 text-[var(--color-text)]">
+        <li>orchestrated mega-scale recruitment as <strong>Lead at Placecom</strong> — managed hiring pipelines for IBM, HP, Bentley, Mercedes-Benz, Bosch, and TCS. moved thousands of candidates through corporate funnels for 30+ global giants.</li>
+        <li>built founding ops at <strong>OP OFFICIALS</strong> (110k subscribers) — scaled a community to 74k discord members.</li>
+        <li>led a freelance unit <strong>StreamEase</strong> — managed a high-output squad to build a network of 78+ creators for Loco, Rooter, JioGames, Chingari and Rumble.</li>
+        <li>managed a regulatory exit — navigated the 2022 Govt ban which forced an exit after 20 months of growth and partnerships with Monster Energy, Redbull, Spinbot, Loco, Rooter, etc.</li>
+        <li>secured <strong>Mathematics AIR 26</strong> and <strong>Overall AIR 99</strong> in the National Level Science Talent Search Examination (NSTSE).</li>
+        <li>received the prestigious <strong>IMO Gold Medal of Distinction</strong> in the International Mathematics Olympiad.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <p class="text-[var(--color-text)] leading-relaxed">
+        i just finished my computer engineering degree (Honours in Data Science). i took a brief career pause post-graduation to handle a critical family medical emergency — that responsibility is now fully resolved and i am back in the arena.
+      </p>
+      <p class="text-[var(--color-text)] leading-relaxed mt-3">
+        i am currently slated to enter a B-School in a few weeks, but i am looking for the right mission to drop out for. if you are building something massive in Physical AI, Robotics, or Data Infrastructure — let's talk.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Links</h2>
+      <ul class="space-y-1">
+        {links.map(link => (
+          <li>
+            <a href={link.url} target="_blank" rel="noopener">{link.label} &rarr;</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Thoughts</h2>
+      <ul class="space-y-1">
+        {posts.map(post => (
+          <li class="flex items-baseline justify-between gap-4">
+            <a href={post.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] no-underline hover:underline">
+              {post.title}
+            </a>
+            <span class="text-sm text-[var(--color-text-muted)] shrink-0">{post.date}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+  </div>
 </Layout>
