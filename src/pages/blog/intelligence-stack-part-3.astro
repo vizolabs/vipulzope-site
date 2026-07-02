@@ -1,0 +1,280 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/intelligence-stack.css';
+---
+
+<Layout title="A Practical Framework for Building Operational Loops | Vipul Zope" description="A phased, no-hype framework for applying loop engineering to operations and supply chain — with cost estimates, readiness criteria, and honest expectations.">
+
+  <article>
+
+    <header class="is-hero">
+      <p class="series-label">The Intelligence Stack · <span>Part 3 of 3</span></p>
+      <h1>A Practical Framework for Building <em>Operational</em> Loops</h1>
+      <p class="hero-sub">What to build, in what order, at what cost, and with what expectations — a phased approach grounded in what actually works today, not what might work someday.</p>
+      <div class="hero-meta">
+        <span>14 min read</span>
+        <span>July 2026</span>
+        <span>Operations · Supply Chain · Implementation</span>
+      </div>
+    </header>
+
+    <div class="is-prose">
+      <p class="lead">In Part 1, the evolution from rules to loops. In Part 2, an honest look at what's real and what's hype. This part is about action: if you accept that the pattern has value — with the caveats covered in Part 2 — what do you actually do about it?</p>
+
+      <p>A note on perspective: this framework is synthesised from published work by Huntley, Osmani, and Ng, practitioner accounts, and the operational realities described by supply chain professionals. Where I'm estimating rather than citing demonstrated results, I'll say so.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>Before Anything: A Readiness Check</h2>
+      <h4>Not every organisation should start here</h4>
+
+      <p>Building loops on top of unreliable data or disconnected systems will amplify problems, not solve them. Before considering loops, honestly assess the foundations.</p>
+    </div>
+
+    <div class="is-readiness">
+      <div class="is-readiness-col green">
+        <h4>Ready to Build Loops</h4>
+        <ul>
+          <li>Inventory data is accurate and updated in real time</li>
+          <li>ERP and marketplace systems have accessible APIs</li>
+          <li>Team already uses AI tools in daily work</li>
+          <li>Someone understands both operations and data on the team</li>
+          <li>You can define what "good" looks like for key decisions</li>
+        </ul>
+      </div>
+      <div class="is-readiness-col amber">
+        <h4>Ready for Workflows, Not Yet Loops</h4>
+        <ul>
+          <li>Data exists but is spread across spreadsheets and silos</li>
+          <li>Some systems have APIs, others don't</li>
+          <li>Team uses AI informally but hasn't structured it</li>
+          <li>No one bridges operations and data formally</li>
+          <li>Verification criteria would need to be designed from scratch</li>
+        </ul>
+      </div>
+      <div class="is-readiness-col red">
+        <h4>Fix Foundations First</h4>
+        <ul>
+          <li>Inventory accuracy below 90%</li>
+          <li>Core systems lack integration capabilities</li>
+          <li>No team member has used AI tools at work</li>
+          <li>Processes are undocumented or inconsistent</li>
+          <li>Basic supply chain firefighting is still daily reality</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="is-callout">
+      <span class="is-callout-label">If you're in the red column</span>
+      <p>That's not a failure — it's useful clarity. Your next investment should be data quality, system integration, and AI literacy. The loops will still be there when the foundations are ready.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>Which Processes Should Get Loops?</h2>
+      <h4>A four-question filter</h4>
+
+      <p>Not every process benefits from a loop. Based on the frameworks covered in Parts 1 and 2, I'd evaluate candidates against four criteria:</p>
+
+      <p><strong>1. Repetition frequency.</strong> How often does this decision happen? Processes that run daily or more justify loop engineering. Monthly processes probably don't.</p>
+
+      <p><strong>2. Verification clarity.</strong> Can you objectively determine whether the output was good? If yes — stockout rate, delivery timeliness, cost variance — the loop can self-correct. If no — "was this the right strategic call?" — keep a human at that step.</p>
+
+      <p><strong>3. Cost of a wrong decision.</strong> "$200 overpaid on one order" is acceptable risk for autonomous execution. "Lose a key supplier relationship" requires human approval.</p>
+
+      <p><strong>4. Data accessibility.</strong> Does the loop have access to the data it needs? If the information lives in someone's head or in an email attachment, the loop can't use it.</p>
+    </div>
+
+    <div class="is-table-wrap">
+      <span class="is-table-caption">Operations processes ranked by loop readiness</span>
+      <table>
+        <thead>
+          <tr><th>Process</th><th>Frequency</th><th>Verifiable?</th><th>Risk</th><th>Data?</th><th>Readiness</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Inventory reorder (steady-state)</td><td>Daily</td><td>Yes</td><td>Low-Med</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
+          <tr><td>Data quality monitoring</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
+          <tr><td>Shipment exception alerts</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
+          <tr><td>Demand-based pricing</td><td>Daily</td><td>Partially</td><td>Medium</td><td>Mostly</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
+          <tr><td>Supplier risk monitoring</td><td>Daily</td><td>Partially</td><td>Med-High</td><td>Partially</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
+          <tr><td>Perishable goods allocation</td><td>Daily</td><td>Yes</td><td>Medium</td><td>Yes</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
+          <tr><td>Returns processing routing</td><td>Daily</td><td>Partially</td><td>Low-Med</td><td>Yes</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
+          <tr><td>Supplier negotiation</td><td>Quarterly</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:#c44b4b;font-weight:600">Low</td></tr>
+          <tr><td>New product assortment</td><td>Seasonal</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:#c44b4b;font-weight:600">Low</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="is-prose">
+      <p>Start with the green items. Build confidence. Expand gradually.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Four Phases</h2>
+      <h4>Based on Ng's time-scale hierarchy, adapted for operations</h4>
+
+      <p>The key insight from Ng's framework is that effective systems use <strong>multiple loops at different time scales</strong> — not one monolithic autonomous system. I'd apply this directly to operations.</p>
+    </div>
+
+    <div class="is-phase-card">
+      <span class="is-phase-num">Phase 1 — Months 1 to 2</span>
+      <h3>The Morning Briefing Loop</h3>
+      <p><strong>What to build:</strong> A scheduled loop that monitors inventory and sales data overnight and generates a structured morning summary. Anomalies flagged, trends highlighted, data presented clearly.</p>
+      <p><strong>What it does not do:</strong> Take any autonomous action. It monitors, analyses, and reports. A human reads the summary and decides what to do.</p>
+      <p><strong>Why this first:</strong> You're building the monitoring capability without execution risk. The team gets comfortable with AI-generated operational summaries. Data connections are validated. This corresponds to Ng's "fast loop" — frequent, verifiable, low-risk.</p>
+      <p><strong>Success measure:</strong> The summary surfaces at least 80% of the issues the team was catching manually.</p>
+    </div>
+
+    <div class="is-phase-card">
+      <span class="is-phase-num">Phase 2 — Months 3 to 4</span>
+      <h3>The Advisor Loop</h3>
+      <p><strong>What to build:</strong> Extend the monitoring loop to include recommendations. When a stockout risk is detected, the loop recommends a specific reorder quantity, supplier, and timing — with reasoning.</p>
+      <p><strong>What it does not do:</strong> Execute autonomously. Every recommendation requires human review before any action.</p>
+      <p><strong>Why this second:</strong> You're testing the quality of the loop's reasoning. Where recommendations align with experienced operators' judgment, trust builds. Where they don't, you discover what knowledge needs to be better encoded into the loop's inputs — what Huntley calls the "preparation."</p>
+      <p><strong>Success measure:</strong> Operators accept at least 70% of recommendations without modification. Where they modify, the "why" is captured to improve the loop's knowledge base.</p>
+    </div>
+
+    <div class="is-phase-card">
+      <span class="is-phase-num">Phase 3 — Months 5 to 8</span>
+      <h3>The Guarded Autonomous Loop</h3>
+      <p><strong>What to build:</strong> For low-risk, high-frequency processes — reordering steady-state products from pre-approved suppliers below a dollar threshold — allow autonomous execution.</p>
+      <p><strong>The guardrails:</strong></p>
+      <ul>
+        <li><strong>Dollar cap:</strong> Autonomous execution only below a defined threshold (e.g., $5,000). Above that — human approval required.</li>
+        <li><strong>Supplier whitelist:</strong> Only with pre-vetted, historically reliable suppliers.</li>
+        <li><strong>Volume cap:</strong> Cannot increase order quantity by more than 30% over the previous order without human approval.</li>
+        <li><strong>Kill switch:</strong> Any team member can pause the loop immediately.</li>
+        <li><strong>Daily audit:</strong> A human reviews the loop's actions every morning.</li>
+      </ul>
+      <p><strong>Why these specific guardrails:</strong> Each one addresses a failure mode identified in Part 2. Dollar caps prevent expensive mistakes. Volume caps prevent runaway orders. The kill switch addresses the drift problem. The daily audit provides the "context advantage" Ng described.</p>
+      <p><strong>Success measure:</strong> Lower stockout rate AND equivalent or lower overstock compared to the previous manual process — measured over eight weeks.</p>
+    </div>
+
+    <div class="is-phase-card">
+      <span class="is-phase-num">Phase 4 — Months 9 to 12 plus</span>
+      <h3>The Outcome-Informed Loop</h3>
+      <p><strong>What to build:</strong> Extend to additional processes. Implement outcome tracking so the loop can reference results of prior decisions.</p>
+      <p><strong>What "learning" actually looks like — the honest version:</strong></p>
+      <ul>
+        <li>When the loop ordered 500 units and 120 remained unsold after 60 days — that fact is recorded in the loop's knowledge base.</li>
+        <li>When the loop chose Supplier B and Supplier B delivered late — that is recorded.</li>
+        <li>The loop references these records in future reasoning.</li>
+        <li><strong>But a human reviews the pattern and decides whether to adjust the loop's parameters.</strong> The loop doesn't autonomously rewrite its own rules.</li>
+      </ul>
+      <p><strong>Why this approach:</strong> This prevents the three failure modes from Part 2 — drift, reward hacking, and flawed logic persistence. The loop has memory. It references outcomes. But a human controls the response. Is this as appealing as "the AI learns by itself"? No. Does it actually work? Based on everything available — yes.</p>
+      <p><strong>Success measure:</strong> Measurable improvement in decision quality over a three-month period — lower stockouts, better margins, fewer emergency orders.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Verification Architecture</h2>
+      <h4>The most important design decision</h4>
+
+      <p>In Part 2, verification was identified as the hardest problem. Here's a practical approach, structured in three tiers:</p>
+
+      <h3>Tier 1: Deterministic — automate fully</h3>
+      <p>Outputs that can be verified with objective, instant checks: Did the order arrive on the expected date? Is the inventory count within 2% of the physical count? Did the reorder stay within budget? Build automated verification for these. No human needed.</p>
+
+      <h3>Tier 2: Outcome-based — automate with delay</h3>
+      <p>Outcomes that take time to materialise: Did the reorder result in stockouts or excess? (Measurable after 30–60 days.) Did the pricing adjustment improve margin? (Measurable after 2–4 weeks.) Build tracking systems that feed these outcomes back into the loop's knowledge base — not for automatic self-correction, but for human review and parameter adjustment.</p>
+
+      <h3>Tier 3: Judgment-based — keep human</h3>
+      <p>Decisions requiring contextual judgment that cannot be automated: Is this the right supplier given geopolitical dynamics? Should we absorb a cost increase to maintain a strategic relationship? Use the loop to prepare data and analysis. Let a human make the call.</p>
+    </div>
+
+    <div class="is-pull-quote">
+      <blockquote>Design the verification before you design the loop. If you can't clearly define what "good" looks like for a given decision, you can't build a reliable loop around it.</blockquote>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Cost Picture</h2>
+      <h4>Honest estimates — with uncertainty acknowledged</h4>
+
+      <p>These are estimates based on current API pricing, published case studies, and practitioner accounts. Actual costs will vary significantly depending on scale, complexity, and implementation quality.</p>
+    </div>
+
+    <div class="is-table-wrap">
+      <span class="is-table-caption">Estimated annual cost — mid-size e-commerce operation</span>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Current (Workflows + AI)</th><th>With Loops (Phase 3)</th><th>With Loops (Phase 4)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Data infrastructure</td><td>$300–500K</td><td>$250–400K</td><td>$200–350K</td></tr>
+          <tr><td>AI/ML models</td><td>$200–500K</td><td>$100–250K</td><td>$80–200K</td></tr>
+          <tr><td>Integration</td><td>$100–300K</td><td>$60–150K</td><td>$40–100K</td></tr>
+          <tr><td>AI API costs (reasoning)</td><td>$20–80K</td><td>$60–180K</td><td>$100–300K</td></tr>
+          <tr><td>Human decision labour</td><td>$300–600K</td><td>$200–400K</td><td>$150–300K</td></tr>
+          <tr><td>Loop design &amp; maintenance</td><td>$0</td><td>$80–150K</td><td>$50–100K</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>$920K–$1.98M</strong></td><td><strong>$750K–$1.53M</strong></td><td><strong>$620K–$1.35M</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="is-prose">
+      <p><strong>Net savings estimate: 15–30% of current AI operations spend.</strong> Not the 40–45% sometimes claimed — and token costs go up as you add more loops. The net depends heavily on implementation quality.</p>
+
+      <p>The indirect savings are harder to quantify but likely larger: reduced stockouts, reduced overstock, reduced emergency freight, reduced spoilage. Even a 20% improvement in these areas can represent hundreds of thousands of dollars — numbers that dwarf the direct infrastructure savings.</p>
+
+      <p>These are estimates. Model your specific situation before committing resources.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>What the Next Three Years Look Like</h2>
+
+      <p><strong>2026–2027:</strong> Early adopters in e-commerce and perishable goods begin running verified monitoring and assisted decision loops. Results are promising but require significant engineering effort. The companies that succeed are the ones that invested in data quality first.</p>
+
+      <p><strong>2027–2028:</strong> Platform tools emerge that let non-technical operations managers design loops visually — with pre-built connectors, guardrail templates, and verification frameworks. Loop design becomes a professional skill, similar to how spreadsheet modelling became one in the 1990s.</p>
+
+      <p><strong>2028–2029:</strong> Supply chain loops become standard in competitive industries. Companies running well-designed loops will have measurable advantages in speed, cost, and responsiveness. The gap between "loop-native" and "workflow-native" companies becomes significant.</p>
+
+      <p><strong>Uncertainty flagged:</strong> These timelines assume continued improvement in LLM reliability and reduction in API costs. If progress stalls on either front, adoption will be slower.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Takeaway Across All Three Parts</h2>
+
+      <p>One idea has been consistent across this entire series: <strong>the human role is shifting from executing operational work to designing the systems that do it.</strong></p>
+
+      <p>That shift is real. It's happening now. And it's not a threat — it's leverage.</p>
+
+      <p>But leverage applied carelessly creates damage. The operations leader who designs well-verified, carefully guarded loops will run a system that handles routine decisions while they focus on the ones that matter. The one who treats loops as a magic automation layer will accumulate drift, burn tokens, and blame the technology.</p>
+
+      <p>The difference isn't the tool. It's the engineering.</p>
+
+      <p>Start small. Start with verification. Start with the processes you understand best. The pattern will wait — but the organisations that start building experience with it now will be meaningfully ahead when it becomes the standard way operations works.</p>
+    </div>
+
+    <div class="is-pull-quote">
+      <blockquote>The direction is unmistakable: automation made machines follow rules, prompt engineering made AI answer questions, workflow engineering made AI follow processes, and loop engineering makes AI run operations — with humans designing and improving the system, not executing every step within it.</blockquote>
+    </div>
+
+    <div class="is-series-nav">
+      <h3>The Intelligence Stack — Complete Series</h3>
+      <ol>
+        <li><a href="/blog/intelligence-stack-part-1" style="color:inherit;text-decoration:none">From Rules to Loops: The Quiet Evolution of AI in Operations</a></li>
+        <li><a href="/blog/intelligence-stack-part-2" style="color:inherit;text-decoration:none">Loop Engineering: What's Real, What's Hype, and What's Unknown</a></li>
+        <li class="current">A Practical Framework for Building Operational Loops</li>
+      </ol>
+    </div>
+
+    <div class="is-author">
+      <p>This series is the product of extensive research, not production experience. If you're building operational loops — or have decided the pattern isn't right for your context — I'd value the perspective either way.</p>
+      <a href="mailto:contactzope@gmail.com" class="cta">Get in Touch</a>
+    </div>
+
+  </article>
+
+</Layout>

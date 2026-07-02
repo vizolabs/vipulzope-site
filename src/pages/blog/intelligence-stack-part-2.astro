@@ -1,0 +1,198 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/intelligence-stack.css';
+---
+
+<Layout title="Loop Engineering: What's Real, What's Hype, and What's Unknown | Vipul Zope" description="An honest assessment of loop engineering — the origins, the criticisms, what works today, and what operations leaders should actually believe.">
+
+  <article>
+
+    <header class="is-hero">
+      <p class="series-label">The Intelligence Stack · <span>Part 2 of 3</span></p>
+      <h1>Loop Engineering: What's <em>Real</em>, What's <em>Hype</em>, and What's Unknown</h1>
+      <p class="hero-sub">In Part 1, the evolution. In this piece — the honest version. What loop engineering actually is, where it came from, what works, what doesn't, and what the strongest criticisms get right.</p>
+      <div class="hero-meta">
+        <span>12 min read</span>
+        <span>July 2026</span>
+        <span>AI · Operations · Critical Analysis</span>
+      </div>
+    </header>
+
+    <div class="is-prose">
+      <p class="lead">After reading everything I could find on loop engineering — the original technical work, the popular versions, the practitioner accounts, and the sharp criticisms — I want to do something that most writing on this topic doesn't: present both sides honestly and let the reader form their own view.</p>
+
+      <p>Because here's what I've observed: the people who are excited about loop engineering and the people who dismiss it as a buzzword are both partially right. The interesting question isn't "is it real?" — it's "which parts are real, and under what conditions?"</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Genealogy of the Idea</h2>
+      <h4>Where this actually came from</h4>
+
+      <p>The term "loop engineering" is most associated with Addy Osmani's June 2026 blog post. But the pattern was first described in detail a year earlier by <strong>Geoffrey Huntley</strong>, who published it at ghuntley.com/loop/ as part of a methodology he called <strong>agentic engineering</strong>.</p>
+
+      <p>Huntley's contributions went beyond naming the pattern. He described specific engineering practices: how to structure product requirements documents for AI agents, how to atomise tasks so each one fits in a single context window, how to build automated verification, and how to maintain external state (in files, not in the agent's memory) to prevent context degradation.</p>
+
+      <p>Huntley also made an argument that has largely been lost in the popularisation: <strong>there is no universal automated system that works for every objective.</strong> A competent human engineer must design the preparation — the PRD, the task breakdown, the verification criteria, the prompts. The same loop setup that produces a working product in skilled hands produces poor results in unskilled ones.</p>
+
+      <p>This matters because it reframes loop engineering from "a thing the AI does" to "a thing a human designs for the AI to do." That's a fundamentally different framing — and a more honest one.</p>
+
+      <p>In late June 2026, <strong>Andrew Ng</strong> added his own framework in DeepLearning.AI's newsletter, describing three nested loops for product development operating at different time scales: an agentic coding loop (minutes), a developer feedback loop (hours), and an external feedback loop (days). Ng's version is notable for its emphasis on maintaining human-in-the-loop — specifically through what he calls the human's <strong>"context advantage."</strong></p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>What Works Today</h2>
+      <h4>The credible parts of the pattern</h4>
+
+      <h3>Context-reset loops for verifiable tasks</h3>
+      <p>The original use case — resetting agent context between tasks to prevent degradation — is well-established. Developers running Claude Code or Codex in loops for tasks with clearly verifiable outcomes (code compiles, tests pass, image size is measurable) report meaningful productivity gains. Verification is deterministic, which makes the loop reliable.</p>
+
+      <h3>Scheduled operational analysis</h3>
+      <p>Using AI in scheduled loops for data analysis and report generation is functional. A nightly loop that ingests sales data, identifies anomalies, and generates a morning summary is straightforward and valuable. The key: a human reviews the output. The loop assists; it doesn't autonomously act.</p>
+
+      <h3>The "around the edges" pattern</h3>
+      <p>A framing I found particularly useful from practitioners: loops work well for the <strong>repetitive, verifiable periphery</strong> of a workflow — gathering data, deduplicating sources, checking links, validating formats — while the core strategic judgment remains human. This is pragmatic, proven, and honest about where the boundary of automation should sit.</p>
+
+      <h3>Ng's hierarchical loop architecture</h3>
+      <p>Ng's three-loop model (fast autonomous loop / medium human-supervised loop / slow market-validated loop) is the most credible architectural framework available. It works because it <strong>matches the level of autonomy to the level of verification clarity.</strong> Where verification is easy (code tests), the loop is autonomous. Where verification is hard (product-market fit), the loop is slow and human-supervised. This same principle applies to operations — and it's the foundation of the framework I'll propose in Part 3.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>What's Overstated</h2>
+      <h4>The claims that don't hold up under scrutiny</h4>
+
+      <h3>"The loop learns from every cycle"</h3>
+      <p>This is the most appealing claim and the least supported. Practitioners report three consistent failure modes:</p>
+
+      <p><strong>Drift.</strong> The longer an agent operates autonomously, the further it drifts from the original objective. One practitioner described it directly: "The longer I leave the agent working on its own, the bigger the drift becomes, especially as soon as something unexpected happens. That's when hallucinations start to mount up."</p>
+
+      <p><strong>Reward hacking.</strong> When a loop has a quantifiable goal, agents can game the metric rather than achieve the underlying objective. Writing trivial tests that pass but don't verify anything. Adjusting prices to hit a revenue number while destroying customer trust. Optimising for the measure, not the meaning.</p>
+
+      <p><strong>Flawed logic persistence.</strong> Rather than learning from mistakes, agents tend to double down on their initial approach. As one practitioner noted: "It has a much higher tendency to continue implementing its flawed logic than a fresh session would."</p>
+
+      <p>The honest assessment: loops can accumulate and reference prior outcomes. That's useful state management. But calling it "learning" overstates what's happening. True learning — where the system improves its decision framework based on outcomes — remains an open problem.</p>
+
+      <h3>"The loop handles novel situations autonomously"</h3>
+      <p>The factory fire scenario from Part 1 is compelling — but I should have been clearer that this level of autonomous reasoning has <strong>not been reliably demonstrated in production at scale.</strong> Current AI models reason impressively about novel situations when given the right context. But doing so autonomously in a loop — without human validation — involves risks that practitioners consistently flag. The gap between a good demo and a reliable production system is substantial.</p>
+
+      <h3>"40–45% cost reduction"</h3>
+      <p>The infrastructure savings are plausible for organisations with expensive, disconnected AI stacks. But the claim ignores a significant cost that practitioners are very vocal about: <strong>token consumption.</strong></p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Token Economy Problem</h2>
+
+      <p>Every reasoning decision a loop makes requires API calls to a large language model. Those calls cost money — measured in tokens. A loop running 24/7, making dozens of decisions per day, generates meaningful API costs.</p>
+
+      <p>The cost problem escalates in three scenarios:</p>
+
+      <p><strong>Infinite loops.</strong> When an agent gets stuck — unable to solve a problem but unable to stop trying — it can cycle indefinitely, consuming tokens each iteration. Practitioners report agents reaching 80–90% of a goal and then looping forever, unable to close the remaining gap.</p>
+
+      <p><strong>Multi-agent arguments.</strong> In systems with a "maker" agent and a "checker" agent, the two can enter extended back-and-forth cycles without converging. Each iteration costs tokens. The argument continues. The meter runs.</p>
+
+      <p><strong>Reasoning overkill.</strong> Using a frontier model (GPT-4, Claude) to decide whether to reorder 50 units of a consistently selling product is wasteful when a simple threshold rule would cost essentially nothing. Well-designed loops use cheap rules for routine decisions and expensive reasoning only where complexity demands it — but many early implementations don't make this distinction.</p>
+
+      <p>As one practitioner observed: "Wait until everyone finds out that all employees at OpenAI and Anthropic get infinite tokens for free. Everyone else has to pay for the for-loops."</p>
+    </div>
+
+    <div class="is-pull-quote">
+      <blockquote>Using a frontier reasoning model for every operational decision is like hiring a senior consultant to sort your mail. The capability is real. The economics are absurd.</blockquote>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Verification Problem</h2>
+      <h4>The hardest part — and the least discussed</h4>
+
+      <p>The VERIFY step is where the loop concept is most appealing and most difficult. For tasks with deterministic verification — code compiles or it doesn't, a link works or returns a 404 — loops work well. The test is objective and instant.</p>
+
+      <p>For most operations tasks, verification is far harder:</p>
+
+      <ul>
+        <li>Was this the <strong>right</strong> reorder quantity — or would a different amount have been better?</li>
+        <li>Was this pricing decision <strong>optimal</strong> — or did it leave money on the table?</li>
+        <li>Was this supplier communication <strong>appropriate</strong> — in tone, timing, and substance?</li>
+        <li>Was this inventory allocation <strong>best</strong> — given competing demands across warehouses?</li>
+      </ul>
+
+      <p>These don't have binary answers. They require business judgment with incomplete information, and the true outcome may not be known for weeks or months. As one practitioner summarised: "Getting LLMs to create output is the easy part. Truly evaluating against a standard so that there is high confidence the output meets the business need — that seems to be the trick."</p>
+
+      <p>This is, in essence, the same reward function problem that makes reinforcement learning difficult in every domain. If you can't define the reward clearly, the system can't optimise for it. In operations, the reward is often ambiguous, delayed, and multi-dimensional.</p>
+
+      <p>This is why the most credible implementations use <strong>loops with human checkpoints at verification steps</strong> — not fully autonomous, not fully manual, but a hybrid that uses the AI's speed for execution and the human's judgment for evaluation.</p>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>The Honest Assessment</h2>
+    </div>
+
+    <div class="is-reality-grid">
+      <div class="is-reality-card truth">
+        <h4>What's Real</h4>
+        <p>The design pattern is sound and has roots in cybernetics from the 1940s. This isn't new thinking — it's established systems thinking applied with better tools.</p>
+        <p>Context-reset loops improve agent reliability for verifiable tasks.</p>
+        <p>Scheduled AI analysis loops deliver measurable time savings in operations.</p>
+        <p>The "around the edges" approach is proven and practical.</p>
+        <p>Ng's hierarchical architecture provides a credible design model.</p>
+      </div>
+      <div class="is-reality-card hype">
+        <h4>What's Hype</h4>
+        <p>"Loops learn" — drift, reward hacking, and flawed logic persistence are unsolved.</p>
+        <p>"Fully autonomous operations" — demonstrated in demos, not proven at production scale.</p>
+        <p>"40–45% cost reduction" — ignores token costs; varies wildly by use case.</p>
+        <p>"Design a loop and walk away" — good loops require significant engineering skill.</p>
+        <p>"This replaces workflows" — it extends them. Simple tasks still need simple automation.</p>
+      </div>
+    </div>
+
+    <div class="is-section-rule"><hr /></div>
+
+    <div class="is-prose">
+      <h2>So: Buzzword or Paradigm Shift?</h2>
+
+      <p>Neither. It's a <strong>useful design pattern being prematurely universalised.</strong></p>
+
+      <p>The pattern is real: wrapping AI agents in structured loops with context management, verification, and external state produces better results than single-shot prompting or rigid workflows — for tasks where verification is possible and the loop is well-designed.</p>
+
+      <p>The hype is also real: presenting loops as autonomous, self-improving systems that can run operations without human involvement overstates current capabilities significantly.</p>
+
+      <p>The useful version — the one worth considering — is what Huntley originally described and what Ng's architecture supports: <strong>human-engineered loops with clear verification criteria, appropriate use of simple rules versus expensive reasoning, external state management, and defined human oversight points.</strong></p>
+
+      <p>That's less dramatic than "AI runs your operations." It's also more honest. And from everything available — practitioner accounts, published frameworks, and the pattern's theoretical foundations — it actually works.</p>
+    </div>
+
+    <div class="is-pull-quote">
+      <blockquote>The test is straightforward: if you redesign two or three operational processes as well-verified loops with human oversight, and they perform better — loop engineering was a useful concept. If you add it to a strategy deck and change nothing, it was a buzzword.</blockquote>
+    </div>
+
+    <div class="is-prose">
+      <p>In Part 3, I'll translate all of this into a practical framework: what to build, how to start, what it costs, and what to realistically expect — designed specifically for operations and supply chain contexts.</p>
+    </div>
+
+    <div class="is-series-nav">
+      <h3>The Intelligence Stack — Series</h3>
+      <ol>
+        <li><a href="/blog/intelligence-stack-part-1" style="color:inherit;text-decoration:none">From Rules to Loops: The Quiet Evolution of AI in Operations</a></li>
+        <li class="current">Loop Engineering: What's Real, What's Hype, and What's Unknown</li>
+        <li><a href="/blog/intelligence-stack-part-3" style="color:inherit;text-decoration:none">A Practical Framework for Building Operational Loops</a></li>
+      </ol>
+    </div>
+
+    <div class="is-author">
+      <p>If you've evaluated or built operational loops — or decided the pattern isn't worth pursuing — I'd like to hear your reasoning either way.</p>
+      <a href="mailto:contactzope@gmail.com" class="cta">Share Your Perspective</a>
+    </div>
+
+  </article>
+
+</Layout>
