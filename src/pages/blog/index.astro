@@ -3,9 +3,22 @@ import Layout from '../../layouts/Layout.astro';
 
 const posts = [
   {
-    url: '/blog/from-rules-to-loops',
-    title: 'from rules to loops: how ai operations quietly evolved',
-    date: 'Jun 30, 2026',
+    url: '/blog/intelligence-stack-part-1',
+    title: 'from rules to loops: the quiet evolution of ai in operations',
+    date: 'Jul 2, 2026',
+    series: 'The Intelligence Stack · Part 1',
+  },
+  {
+    url: '/blog/intelligence-stack-part-2',
+    title: 'loop engineering: what\'s real, what\'s hype, and what\'s unknown',
+    date: 'Jul 2, 2026',
+    series: 'The Intelligence Stack · Part 2',
+  },
+  {
+    url: '/blog/intelligence-stack-part-3',
+    title: 'a practical framework for building operational loops',
+    date: 'Jul 2, 2026',
+    series: 'The Intelligence Stack · Part 3',
   },
 ];
 ---
@@ -21,9 +34,14 @@ const posts = [
             href={post.url}
             class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--color-border)] last:border-none no-underline group"
           >
-            <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
-              {post.title}
-            </span>
+            <div>
+              <span class="block font-mono text-[0.55rem] tracking-[0.15em] uppercase text-[var(--color-accent)] mb-1">
+                {post.series}
+              </span>
+              <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+                {post.title}
+              </span>
+            </div>
             <span class="font-mono text-[0.62rem] text-[var(--color-ink-muted)] tracking-[0.04em] shrink-0">
               {post.date}
             </span>
