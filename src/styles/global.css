@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #dbeafe;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-bg-card: #f9fafb;
+  --color-bg: #f8f5ef;
+  --color-bg-deep: #efe9dd;
+  --color-surface: #ffffff;
+  --color-ink: #1a1f36;
+  --color-ink-secondary: #4a4e6a;
+  --color-ink-muted: #8e91a4;
+  --color-accent: #b8732a;
+  --color-accent-light: #daa96a;
+  --color-accent-faint: rgba(184, 115, 42, 0.07);
+  --color-border: #ddd8ce;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
 }
 
 html {
@@ -14,11 +21,12 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: var(--color-text);
-  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -27,10 +35,6 @@ body {
 }
 
 a {
-  color: var(--color-accent);
+  color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }

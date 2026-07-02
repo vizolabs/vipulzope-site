@@ -18,64 +18,117 @@ const links = [
 ---
 
 <Layout title="Vipul Zope">
-  <div class="max-w-[650px] mx-auto px-6 py-12">
+  <div class="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
 
-    <h1 class="text-2xl font-bold mb-2">hey! i'm vipul.</h1>
-
-    <p class="text-[var(--color-text-muted)] mb-8">
-      i'm a 22-year-old operator and systems builder. i believe the next decade of Physical AI and Robotics will be won by those who control the Data Supply Chain.
-    </p>
-
-    <section class="mb-10">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Problems I Find Interesting</h2>
-      <ul class="space-y-3 text-[var(--color-text)]">
-        <li><strong>industrial data pipelines (B2B):</strong> securing proprietary, high-fidelity tactile data by integrating multimodal sensors into heavy manufacturing and factory workflows.</li>
-        <li><strong>decentralized data scaling:</strong> removing the entropy from high-volume, community-led gig-worker networks to capture infinite real-world spatial variability via mobile head-mounts.</li>
-        <li><strong>sim-to-real ecosystems:</strong> designing incentivized digital platforms where massive communities bridge the gap between simulated tasks and physical ground-truth.</li>
-        <li><strong>operationalized intelligence:</strong> the pure logistics of managing a multi-tiered supply chain—turning chaotic human movement across factories and streets into structured robotic policies.</li>
-      </ul>
+    <!-- Hero -->
+    <section class="mb-12 sm:mb-16">
+      <h1 class="font-serif font-semibold text-[clamp(2rem,_4.5vw,_2.8rem)] leading-[1.15] text-[var(--color-ink)] mb-4">
+        hey! i'm <em class="italic font-normal text-[var(--color-accent)]">vipul.</em>
+      </h1>
+      <p class="text-[1.02rem] leading-[1.65] text-[var(--color-ink-secondary)] max-w-[520px] mb-3">
+        i'm a 22-year-old operator and systems builder.
+      </p>
+      <blockquote class="font-serif text-[1.15rem] italic leading-[1.5] text-[var(--color-ink)] border-l-3 border-[var(--color-accent)] pl-5 max-w-[520px] mt-6">
+        i believe the next decade of Physical AI and Robotics will be won by those who control the Data Supply Chain.
+      </blockquote>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Before Now</h2>
-      <ul class="space-y-3 text-[var(--color-text)]">
-        <li>orchestrated mega-scale recruitment (<strong><a href="https://pcet.org.in/placements.php" target="_blank" rel="noopener" class="text-[var(--color-text)] hover:text-[var(--color-accent)]">PCET Placecom</a></strong>); managed hiring pipelines for IBM, HP, Bentley, Mercedes-Benz, Bosch, and TCS.</li>
-        <li>built founding ops at <strong>OP OFFICIALS</strong> (<a href="https://www.youtube.com/@OpOfficials" target="_blank" rel="noopener" class="text-[var(--color-text)] hover:text-[var(--color-accent)]">110k subscribers</a>) — scaled a community to <a href="https://discord.com/invite/gPba8rfg3c" target="_blank" rel="noopener" class="text-[var(--color-text)] hover:text-[var(--color-accent)]">74k discord members</a>.</li>
-        <li>led a freelance unit <strong>StreamEase</strong> — managed a high-output squad to build a network of 78+ creators for Loco, Rooter, JioGames, Chingari and Rumble.</li>
-        <li>managed a regulatory exit — navigated the 2022 Govt ban which forced an exit after 20 months of growth and partnerships with Monster Energy, Redbull, Spinbot, Loco, Rooter, etc.</li>
-        <li>secured <strong>Mathematics AIR 26</strong> and <strong>Overall AIR 99</strong> in the National Science Talent Search Examination.</li>
-      </ul>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">// early_signals</h2>
-      <div class="space-y-4 text-[var(--color-text)] leading-relaxed">
-        <p>i've been a conductor of chaos since i was a kid. as a <strong>School Band Leader</strong>, i played drums and bass for annual parades and guest welcomes—learning the high-stakes timing of live performance. i spent my teens as a <strong>Pro-Gamer</strong> learning strategy under pressure. i model my execution style after <strong>Rohit Sharma:</strong> calm leadership, selfless strategy, and relentless power when it's time to hit.</p>
-        <p>i just finished my computer engineering degree (Honours in Data Science). i took a brief career pause post-graduation to handle a critical family medical emergency—that responsibility is now fully resolved and i am back in the arena.</p>
-        <p class="font-semibold">i am ready to burn the boats.</p>
-      </div>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Links</h2>
-      <ul class="space-y-1">
-        {links.map(link => (
-          <li>
-            <a href={link.url} target="_blank" rel="noopener">{link.label} &rarr;</a>
+    <!-- Problems -->
+    <section class="mb-12">
+      <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] pb-3 mb-5 border-b border-[var(--color-border)]">
+        Problems I Find Interesting
+      </h2>
+      <ul class="list-none p-0 space-y-0">
+        {[
+          { strong: 'Industrial data pipelines (B2B):', text: 'securing proprietary, high-fidelity tactile data by integrating multimodal sensors into heavy manufacturing and factory workflows.' },
+          { strong: 'Decentralised data scaling:', text: 'removing the entropy from high-volume, community-led gig-worker networks to capture infinite real-world spatial variability via mobile head-mounts.' },
+          { strong: 'Sim-to-real ecosystems:', text: 'designing incentivised digital platforms where massive communities bridge the gap between simulated tasks and physical ground-truth.' },
+          { strong: 'Operationalised intelligence:', text: 'the pure logistics of managing a multi-tiered supply chain — turning chaotic human movement across factories and streets into structured robotic policies.' },
+        ].map(item => (
+          <li class="py-4 border-b border-[var(--color-border)] last:border-none text-[0.92rem] leading-[1.6] text-[var(--color-ink-secondary)]">
+            <strong class="text-[var(--color-ink)] font-medium">{item.strong}</strong> {item.text}
           </li>
         ))}
       </ul>
     </section>
 
+    <!-- Before Now -->
+    <section class="mb-12">
+      <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] pb-3 mb-5 border-b border-[var(--color-border)]">
+        Before Now
+      </h2>
+      <ol class="list-none p-0 space-y-0">
+        {[
+          { html: 'Orchestrated mega-scale recruitment at <a href="https://pcet.org.in/placements.php" target="_blank" rel="noopener" class="text-[var(--color-ink)] font-medium underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-200"><strong>PCET Placecom</strong></a> — managed hiring pipelines for IBM, HP, Bentley, Mercedes-Benz, Bosch, and TCS.' },
+          { html: 'Built founding ops at <strong>OP OFFICIALS</strong> (<a href="https://www.youtube.com/@OpOfficials" target="_blank" rel="noopener" class="text-[var(--color-ink)] font-medium underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-200">110k subscribers</a>) — scaled a community to <a href="https://discord.com/invite/gPba8rfg3c" target="_blank" rel="noopener" class="text-[var(--color-ink)] font-medium underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-200">74k Discord members</a>.' },
+          { html: 'Led a freelance unit <strong>StreamEase</strong> — managed a high-output squad to build a network of 78+ creators for Loco, Rooter, JioGames, Chingari, and Rumble.' },
+          { html: 'Managed a regulatory exit — navigated the 2022 government ban which forced an exit after 20 months of growth and partnerships with Monster Energy, Redbull, Spinbot, Loco, Rooter, etc.' },
+          { html: 'Secured <strong>Mathematics AIR 26</strong> and <strong>Overall AIR 99</strong> in the National Science Talent Search Examination.' },
+        ].map((item, idx) => (
+          <li class="py-3.5 pl-8 relative border-b border-[var(--color-border)] last:border-none text-[0.92rem] leading-[1.6] text-[var(--color-ink-secondary)]"
+            ><span class="font-mono text-[0.6rem] text-[var(--color-accent)] tracking-[0.05em] absolute left-0 top-[1rem]">{String(idx + 1).padStart(2, '0')}</span
+            ><Fragment set:html={item.html} /></li>
+        ))}
+      </ol>
+    </section>
+
+    <!-- Early Signals -->
+    <section class="mb-12">
+      <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] pb-3 mb-5 border-b border-[var(--color-border)]">
+        // early_signals
+      </h2>
+      <div class="space-y-4 text-[0.92rem] leading-[1.7] text-[var(--color-ink-secondary)]">
+        <p>
+          i've been a conductor of chaos since i was a kid. as a <strong class="text-[var(--color-ink)] font-medium">School Band Leader</strong>, i played drums and bass for annual parades and guest welcomes — learning the high-stakes timing of live performance. i spent my teens as a <strong class="text-[var(--color-ink)] font-medium">Pro-Gamer</strong> learning strategy under pressure. i model my execution style after <strong class="text-[var(--color-ink)] font-medium">Rohit Sharma:</strong> calm leadership, selfless strategy, and relentless power when it's time to hit.
+        </p>
+        <p class="font-serif text-[1.2rem] font-semibold text-[var(--color-ink)] pt-5 mt-6 border-t border-[var(--color-border)]">
+          i am ready to burn the boats.
+        </p>
+        <p class="text-[0.82rem] text-[var(--color-ink-muted)] italic">
+          note: i just finished my computer engineering degree (Honours in Data Science). i took a brief career pause post-graduation to handle a critical family medical emergency — that responsibility is now fully resolved and i am back in the arena.
+        </p>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="mb-12">
+      <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] pb-3 mb-5 border-b border-[var(--color-border)]">
+        Links
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {links.map(link => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            class="group flex items-center gap-2 font-mono text-[0.75rem] text-[var(--color-ink-secondary)] no-underline px-3.5 py-2.5 border border-[var(--color-border)] rounded-md hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:bg-[var(--color-accent-faint)] transition-all duration-200"
+          >
+            <span>{link.label}</span>
+            <span class="ml-auto opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0">→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Thoughts -->
     <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Thoughts</h2>
-      <ul class="space-y-1">
+      <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] pb-3 mb-5 border-b border-[var(--color-border)]">
+        Thoughts
+      </h2>
+      <ul class="list-none p-0 space-y-0">
         {posts.map(post => (
-          <li class="flex items-baseline justify-between gap-4">
-            <a href={post.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] no-underline hover:underline">
-              {post.title}
+          <li>
+            <a
+              href={post.url}
+              class="flex items-baseline justify-between gap-4 py-3.5 border-b border-[var(--color-border)] last:border-none no-underline group"
+            >
+              <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+                {post.title}
+              </span>
+              <span class="font-mono text-[0.62rem] text-[var(--color-ink-muted)] tracking-[0.04em] shrink-0">
+                {post.date}
+              </span>
             </a>
-            <span class="text-sm text-[var(--color-text-muted)] shrink-0">{post.date}</span>
           </li>
         ))}
       </ul>

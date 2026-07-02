@@ -11,16 +11,23 @@ const posts = [
 ---
 
 <Layout title="Blog | Vipul Zope">
-  <div class="max-w-[650px] mx-auto px-6 py-12">
-    <h1 class="text-2xl font-bold mb-6">Blog</h1>
+  <div class="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
+    <h1 class="font-serif font-semibold text-[2rem] leading-[1.15] text-[var(--color-ink)] mb-8">Blog</h1>
 
-    <ul class="space-y-1">
+    <ul class="list-none p-0 space-y-0">
       {posts.map(post => (
-        <li class="flex items-baseline justify-between gap-4">
-          <a href={post.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] no-underline hover:underline">
-            {post.title}
+        <li>
+          <a
+            href={post.url}
+            class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--color-border)] last:border-none no-underline group"
+          >
+            <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+              {post.title}
+            </span>
+            <span class="font-mono text-[0.62rem] text-[var(--color-ink-muted)] tracking-[0.04em] shrink-0">
+              {post.date}
+            </span>
           </a>
-          <span class="text-sm text-[var(--color-text-muted)] shrink-0">{post.date}</span>
         </li>
       ))}
     </ul>

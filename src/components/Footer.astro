@@ -1,13 +1,28 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="max-w-[650px] mx-auto px-6 py-8 mt-16 border-t border-[var(--color-border)]">
-  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-sm text-[var(--color-text-muted)]">
-    <p>&copy; {year}</p>
-    <div class="flex gap-4">
-      <a href="https://x.com/zope_vipul" target="_blank" rel="noopener">X</a>
-      <a href="https://github.com/vizolabs" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/vipulzope" target="_blank" rel="noopener">LinkedIn</a>
+<footer class="max-w-[700px] mx-auto px-6 py-8 mt-16 sm:mt-20 border-t border-[var(--color-border)]">
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+    <p class="font-mono text-xs text-[var(--color-ink-muted)] tracking-wider">&copy; {year}</p>
+    <div class="flex gap-5">
+      <a
+        href="https://x.com/zope_vipul"
+        target="_blank"
+        rel="noopener"
+        class="font-mono text-xs text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
+      >X</a>
+      <a
+        href="https://github.com/vizolabs"
+        target="_blank"
+        rel="noopener"
+        class="font-mono text-xs text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
+      >GitHub</a>
+      <a
+        href="https://linkedin.com/in/vipulzope"
+        target="_blank"
+        rel="noopener"
+        class="font-mono text-xs text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
+      >LinkedIn</a>
     </div>
   </div>
 </footer>
