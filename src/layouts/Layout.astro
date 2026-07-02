@@ -18,6 +18,13 @@ const { title, description = 'Vipul Zope — operator and systems builder' } = A
   <meta name="description" content={description} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style is:global>
+    body { opacity: 0; }
+    body.is-ready { opacity: 1; transition: opacity 0.3s ease; }
+  </style>
 </head>
 <body>
   <Header />
@@ -25,5 +32,10 @@ const { title, description = 'Vipul Zope — operator and systems builder' } = A
     <slot />
   </main>
   <Footer />
+  <script is:inline>
+    document.addEventListener('astro:page-load', () => document.body.classList.add('is-ready'));
+    if (document.readyState !== 'loading') document.body.classList.add('is-ready');
+    else document.addEventListener('DOMContentLoaded', () => document.body.classList.add('is-ready'));
+  </script>
 </body>
 </html>

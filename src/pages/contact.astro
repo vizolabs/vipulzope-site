@@ -3,26 +3,43 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contact | Vipul Zope">
-  <div class="max-w-[650px] mx-auto px-6 py-12">
-    <h1 class="text-2xl font-bold mb-6">Contact</h1>
+  <div class="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
+    <h1 class="font-serif font-semibold text-[2rem] leading-[1.15] text-[var(--color-ink)] mb-8">Contact</h1>
 
-    <div class="space-y-4">
+    <div class="space-y-6">
       <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-1">Email</h2>
-        <a href="mailto:contactzope@gmail.com">contactzope@gmail.com</a>
+        <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] mb-2">Email</h2>
+        <a href="mailto:contactzope@gmail.com" class="text-[1rem] text-[var(--color-ink)] hover:text-[var(--color-accent)] underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] transition-all duration-200">
+          contactzope@gmail.com
+        </a>
       </div>
 
       <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-1">Schedule</h2>
-        <a href="https://cal.com/vipulzope" target="_blank" rel="noopener">cal.com/vipulzope</a>
+        <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] mb-2">Schedule</h2>
+        <a href="https://cal.com/vipulzope" target="_blank" rel="noopener" class="text-[1rem] text-[var(--color-ink)] hover:text-[var(--color-accent)] underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] transition-all duration-200">
+          cal.com/vipulzope
+        </a>
       </div>
 
       <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-1">Social</h2>
-        <ul class="space-y-1">
-          <li><a href="https://x.com/zope_vipul" target="_blank" rel="noopener">X &rarr;</a></li>
-          <li><a href="https://github.com/vizolabs" target="_blank" rel="noopener">GitHub &rarr;</a></li>
-          <li><a href="https://linkedin.com/in/vipulzope" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
+        <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] mb-2">Social</h2>
+        <ul class="list-none p-0 space-y-2">
+          {[
+            { label: 'X', url: 'https://x.com/zope_vipul' },
+            { label: 'GitHub', url: 'https://github.com/vizolabs' },
+            { label: 'LinkedIn', url: 'https://linkedin.com/in/vipulzope' },
+          ].map(link => (
+            <li>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener"
+                class="font-mono text-[0.85rem] text-[var(--color-ink)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
+              >
+                {link.label} →
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

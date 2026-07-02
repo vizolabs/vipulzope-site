@@ -3,22 +3,29 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="From Rules to Loops: How AI Operations Quietly Evolved | Vipul Zope" description="A plain-English guide to the four eras of intelligent automation — and why the latest one changes everything for operations and supply chain.">
-  <article class="max-w-[650px] mx-auto px-6 py-12">
-    <a href="/blog" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] no-underline hover:underline">&larr; back</a>
+  <article class="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
+    <a
+      href="/blog"
+      class="font-mono text-[0.75rem] text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
+    >&larr; back</a>
 
-    <header class="mt-4 mb-8">
-      <h1 class="text-2xl font-bold mb-2 leading-snug">From Rules to Loops: How AI Operations Quietly Evolved</h1>
-      <p class="text-[var(--color-text-muted)] mb-3">A plain-English guide to the four eras of intelligent automation — and why the latest one changes everything for operations and supply chain.</p>
-      <div class="text-sm text-[var(--color-text-muted)]">
+    <header class="mt-6 mb-10">
+      <h1 class="font-serif font-semibold text-[clamp(1.5rem,_4vw,_2.2rem)] leading-[1.2] text-[var(--color-ink)] mb-3">
+        From Rules to Loops: How AI Operations Quietly Evolved
+      </h1>
+      <p class="text-[1rem] leading-[1.6] text-[var(--color-ink-secondary)] mb-4 max-w-[580px]">
+        A plain-English guide to the four eras of intelligent automation — and why the latest one changes everything for operations and supply chain.
+      </p>
+      <div class="font-mono text-[0.65rem] text-[var(--color-ink-muted)] tracking-[0.04em]">
         <span>Published on vipulzope.in · June 30, 2026 · 8 min read</span>
       </div>
     </header>
 
-    <div class="space-y-5 text-[var(--color-text)] leading-relaxed">
+    <div class="space-y-5 text-[var(--color-ink)] leading-relaxed">
 
       <p>There's a conversation happening in boardrooms and WhatsApp groups right now. It usually sounds like this:</p>
 
-      <p><em>"We're already using AI. We have dashboards. We have automation. We even have ChatGPT drafting our emails. What more is there?"</em></p>
+      <p class="italic text-[var(--color-ink-secondary)]"><em>"We're already using AI. We have dashboards. We have automation. We even have ChatGPT drafting our emails. What more is there?"</em></p>
 
       <p>More than you think.</p>
 
@@ -26,13 +33,13 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>Let me walk you through it. No jargon. No theory. Just four eras, one clear story, and a few examples that will feel uncomfortably familiar.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Era 1: Automation (The Rule Follower)</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Era 1: Automation (The Rule Follower)</h2>
 
-      <p class="text-sm text-[var(--color-text-muted)]">Think: 1990s to 2015</p>
+      <p class="font-mono text-[0.65rem] text-[var(--color-ink-muted)] tracking-[0.04em] mb-4">Think: 1990s to 2015</p>
 
-      <p>This is where it all started. Automation meant one thing: <strong>if this happens, do that.</strong></p>
+      <p>This is where it all started. Automation meant one thing: <strong class="text-[var(--color-ink)] font-medium">if this happens, do that.</strong></p>
 
       <p>A customer places an order? Generate a shipping label. Inventory drops below 50 units? Send a reorder alert email. A payment fails? Flag the account.</p>
 
@@ -40,33 +47,33 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>Thousands of businesses still run on this. Your ERP system, your warehouse management software, your payment gateway — they all use automation. Rules written by humans, executed by machines.</p>
 
-      <p><strong>Where it works beautifully:</strong> Repetitive tasks that happen the same way every single time. Generating invoices. Updating inventory counts. Sending order confirmations.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Where it works beautifully:</strong> Repetitive tasks that happen the same way every single time. Generating invoices. Updating inventory counts. Sending order confirmations.</p>
 
-      <p><strong>Where it falls apart:</strong> The moment something unexpected happens.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Where it falls apart:</strong> The moment something unexpected happens.</p>
 
       <p>A customer orders 200 units but you only have 180 in stock and 40 more arriving tomorrow — the system doesn't know what to do. It either rejects the order or creates a partial shipment without understanding the context.</p>
 
       <p>A supplier in China faces a port delay. Your reorder rule doesn't know. It keeps sending orders to the same supplier. Three weeks later, you have empty shelves and angry customers.</p>
 
-      <p><strong>Automation follows rules. It doesn't think.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Automation follows rules. It doesn't think.</strong></p>
 
       <p>And for a long time, that was fine. Because the world moved slowly enough that rules could keep up.</p>
 
       <p>Then it didn't.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Era 2: Prompt Engineering (The Conversation)</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Era 2: Prompt Engineering (The Conversation)</h2>
 
-      <p class="text-sm text-[var(--color-text-muted)]">Think: 2022 to 2025</p>
+      <p class="font-mono text-[0.65rem] text-[var(--color-ink-muted)] tracking-[0.04em] mb-4">Think: 2022 to 2025</p>
 
       <p>November 2022. ChatGPT launches. And suddenly, every person with a laptop has access to an AI that can reason, analyse, write, and think.</p>
 
-      <p>The skill that emerged wasn't coding. It was <strong>asking the right question.</strong></p>
+      <p>The skill that emerged wasn't coding. It was <strong class="text-[var(--color-ink)] font-medium">asking the right question.</strong></p>
 
       <p>Supply chain managers started typing things like:</p>
 
-      <ul class="space-y-2 ml-5 list-disc">
+      <ul class="space-y-2 ml-5 list-disc text-[var(--color-ink-secondary)]">
         <li><em>"Analyse this sales data and tell me which products are slowing down."</em></li>
         <li><em>"Draft a professional email to our supplier explaining we need to increase our order by 30% for the festive season."</em></li>
         <li><em>"Look at these shipping costs and suggest where we're overspending."</em></li>
@@ -76,7 +83,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>This was a breakthrough. For the first time, you didn't need a data scientist to extract insights from your data. You didn't need a content writer to draft professional communications. You just needed to know how to ask.</p>
 
-      <p><strong>But here's what people missed:</strong> Prompt engineering is a <strong>conversation</strong>, not a system.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">But here's what people missed:</strong> Prompt engineering is a <strong class="text-[var(--color-ink)] font-medium">conversation</strong>, not a system.</p>
 
       <p>You ask. The AI answers. You act on it. Then you ask again tomorrow. And the day after. And the day after.</p>
 
@@ -84,17 +91,17 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>If you're sick on Monday, the analysis doesn't happen. If you forget to check the AI's recommendation, the reorder doesn't happen. If you ask a slightly different question than last week, you get a different framework — and your team gets confused.</p>
 
-      <p><strong>Prompt engineering made AI accessible. But it didn't make AI autonomous.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Prompt engineering made AI accessible. But it didn't make AI autonomous.</strong></p>
 
       <p>The AI was smart. But it was sitting in a chat window, waiting for you to talk to it.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Era 3: Workflow Engineering (The Process)</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Era 3: Workflow Engineering (The Process)</h2>
 
-      <p class="text-sm text-[var(--color-text-muted)]">Think: 2024 to 2026</p>
+      <p class="font-mono text-[0.65rem] text-[var(--color-ink-muted)] tracking-[0.04em] mb-4">Think: 2024 to 2026</p>
 
-      <p>The obvious next step: instead of manually prompting the AI every time, why not <strong>design a process that uses AI automatically at each step?</strong></p>
+      <p>The obvious next step: instead of manually prompting the AI every time, why not <strong class="text-[var(--color-ink)] font-medium">design a process that uses AI automatically at each step?</strong></p>
 
       <p>And that's exactly what happened.</p>
 
@@ -102,7 +109,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>A procurement workflow might look like this:</p>
 
-      <ol class="space-y-2 ml-5 list-decimal">
+      <ol class="space-y-2 ml-5 list-decimal text-[var(--color-ink-secondary)]">
         <li>Every Monday at 6 AM, pull inventory data from the ERP.</li>
         <li>Pull 90-day sales trends from the marketplace.</li>
         <li>AI analyses both and recommends which SKUs need reordering and in what quantity.</li>
@@ -115,7 +122,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>This is genuinely powerful. A process that took a person half a day now runs in 15 minutes with a quick human review.</p>
 
-      <p><strong>But here's the catch:</strong> Every step, every branch, every decision point — a human designed it in advance.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">But here's the catch:</strong> Every step, every branch, every decision point — a human designed it in advance.</p>
 
       <p>What happens when a supplier suddenly offers a 20% discount on a product you hadn't planned to reorder? The workflow doesn't know. It follows the plan it was given.</p>
 
@@ -123,21 +130,21 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>What happens when a supplier consistently confirms orders but delivers late — every single time? The workflow keeps ordering from them because nobody updated the supplier scoring logic.</p>
 
-      <p><strong>Workflow engineering automated the process. But the process itself was frozen in time.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Workflow engineering automated the process. But the process itself was frozen in time.</strong></p>
 
       <p>It was a beautifully designed machine. But it couldn't adapt when the world changed around it.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Era 4: Loop Engineering (The Living System)</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Era 4: Loop Engineering (The Living System)</h2>
 
-      <p class="text-sm text-[var(--color-text-muted)]">Think: 2026 and beyond</p>
+      <p class="font-mono text-[0.65rem] text-[var(--color-ink-muted)] tracking-[0.04em] mb-4">Think: 2026 and beyond</p>
 
       <p>This is where it gets interesting.</p>
 
       <p>Loop engineering is a term that emerged from the software development world — coined and articulated clearly by Addy Osmani in mid-2026. But the pattern it describes is far bigger than coding.</p>
 
-      <p>The idea is deceptively simple: <strong>instead of designing a process, design a system that monitors, decides, acts, verifies, and learns — continuously.</strong></p>
+      <p>The idea is deceptively simple: <strong class="text-[var(--color-ink)] font-medium">instead of designing a process, design a system that monitors, decides, acts, verifies, and learns — continuously.</strong></p>
 
       <p>The system doesn't wait for Monday to check inventory. It watches 24/7.</p>
 
@@ -145,50 +152,52 @@ import Layout from '../../layouts/Layout.astro';
 
       <p>The system doesn't just execute and forget. It checks whether its action worked, and it remembers the outcome.</p>
 
-      <p><strong>The loop looks like this:</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">The loop looks like this:</strong></p>
 
-      <p><strong>MONITOR</strong> — Watch all relevant data streams continuously.<br />
-      <strong>DETECT</strong> — Identify when something needs attention.<br />
-      <strong>DECIDE</strong> — Reason about the best course of action using all available context.<br />
-      <strong>ACT</strong> — Execute the decision directly.<br />
-      <strong>VERIFY</strong> — Check whether the action achieved the desired result.<br />
-      <strong>LEARN</strong> — Record the outcome and update future behaviour.</p>
+      <p class="font-mono text-[0.8rem] leading-loose text-[var(--color-ink-secondary)]">
+        <strong class="text-[var(--color-accent)] font-medium">MONITOR</strong> — Watch all relevant data streams continuously.<br />
+        <strong class="text-[var(--color-accent)] font-medium">DETECT</strong> — Identify when something needs attention.<br />
+        <strong class="text-[var(--color-accent)] font-medium">DECIDE</strong> — Reason about the best course of action using all available context.<br />
+        <strong class="text-[var(--color-accent)] font-medium">ACT</strong> — Execute the decision directly.<br />
+        <strong class="text-[var(--color-accent)] font-medium">VERIFY</strong> — Check whether the action achieved the desired result.<br />
+        <strong class="text-[var(--color-accent)] font-medium">LEARN</strong> — Record the outcome and update future behaviour.
+      </p>
 
       <p>Then it starts again.</p>
 
-      <p>Unlike workflows that follow fixed steps, loops are <strong>reasoning systems</strong>. They can handle situations they've never seen before by thinking from first principles and using all available context.</p>
+      <p>Unlike workflows that follow fixed steps, loops are <strong class="text-[var(--color-ink)] font-medium">reasoning systems</strong>. They can handle situations they've never seen before by thinking from first principles and using all available context.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h3 class="text-lg font-bold mt-8 mb-4">Let Me Show You What This Actually Looks Like</h3>
+      <h3 class="font-serif font-semibold text-[1.2rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-4">Let Me Show You What This Actually Looks Like</h3>
 
-      <p><strong>Scenario:</strong> A key supplier in Vietnam has a factory fire.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Scenario:</strong> A key supplier in Vietnam has a factory fire.</p>
 
-      <p><strong>Under automation (Era 1):</strong> Nothing happens. There's no rule for "factory fire." A human reads about it in the news three days later. Panic mode begins.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Under automation (Era 1):</strong> Nothing happens. There's no rule for "factory fire." A human reads about it in the news three days later. Panic mode begins.</p>
 
-      <p><strong>Under prompt engineering (Era 2):</strong> A human hears about the fire. Opens ChatGPT. Types: "Our supplier in Vietnam had a fire. Which of our products are affected? What are our alternatives?" The AI gives a useful analysis. The human then spends two days contacting backup suppliers, adjusting orders, and communicating with customers. Total time: two to three days of intense, stressful work.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Under prompt engineering (Era 2):</strong> A human hears about the fire. Opens ChatGPT. Types: "Our supplier in Vietnam had a fire. Which of our products are affected? What are our alternatives?" The AI gives a useful analysis. The human then spends two days contacting backup suppliers, adjusting orders, and communicating with customers. Total time: two to three days of intense, stressful work.</p>
 
-      <p><strong>Under workflow engineering (Era 3):</strong> A "supplier disruption" workflow exists. When triggered, it pulls affected products, checks the backup supplier database, generates recommendations. A human reviews and approves. The workflow sends communications and adjusts orders. Total human time: two to three hours. But only if someone designed this specific disruption scenario into the workflow. If not — back to panic mode.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Under workflow engineering (Era 3):</strong> A "supplier disruption" workflow exists. When triggered, it pulls affected products, checks the backup supplier database, generates recommendations. A human reviews and approves. The workflow sends communications and adjusts orders. Total human time: two to three hours. But only if someone designed this specific disruption scenario into the workflow. If not — back to panic mode.</p>
 
-      <p><strong>Under loop engineering (Era 4):</strong> The monitoring loop detects the disruption through news feeds, shipping data anomalies, and communication patterns — possibly before the supplier officially notifies you. The loop reasons: "This supplier's factory is in Da Nang. News reports a fire. We have 18 days of stock remaining on the five affected SKUs. Backup Supplier Y was vetted six months ago. They can cover 60% of our volume. Supplier Z can cover the rest at 8% higher cost. Our margins support this. Placing orders now."</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">Under loop engineering (Era 4):</strong> The monitoring loop detects the disruption through news feeds, shipping data anomalies, and communication patterns — possibly before the supplier officially notifies you. The loop reasons: "This supplier's factory is in Da Nang. News reports a fire. We have 18 days of stock remaining on the five affected SKUs. Backup Supplier Y was vetted six months ago. They can cover 60% of our volume. Supplier Z can cover the rest at 8% higher cost. Our margins support this. Placing orders now."</p>
 
       <p>The loop places the orders, adjusts inventory allocation, drafts customer communications for delayed items, and updates pricing on low-stock items.</p>
 
       <p>You receive a summary over morning coffee. Total human time: 15 minutes of review.</p>
 
-      <p><strong>The loop had never seen this exact scenario before. It reasoned from first principles. It acted. It learned.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">The loop had never seen this exact scenario before. It reasoned from first principles. It acted. It learned.</strong></p>
 
       <p>That's the difference.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Why Does This Matter for Operations and Supply Chain?</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Why Does This Matter for Operations and Supply Chain?</h2>
 
       <p>Because operations and supply chain is fundamentally a loop.</p>
 
       <p>Think about it:</p>
 
-      <ul class="space-y-2 ml-5 list-disc">
+      <ul class="space-y-2 ml-5 list-disc text-[var(--color-ink-secondary)]">
         <li>You monitor demand.</li>
         <li>You detect when stock is low.</li>
         <li>You decide how much to order and from whom.</li>
@@ -197,79 +206,79 @@ import Layout from '../../layouts/Layout.astro';
         <li>You learn by measuring outcomes — were there stockouts? Overstock? Late deliveries?</li>
       </ul>
 
-      <p>Every operations team does this loop hundreds of times a week. The question is: <strong>who's running the loop?</strong></p>
+      <p>Every operations team does this loop hundreds of times a week. The question is: <strong class="text-[var(--color-ink)] font-medium">who's running the loop?</strong></p>
 
-      <p>Right now, at most companies, the answer is: <strong>your best person.</strong></p>
+      <p>Right now, at most companies, the answer is: <strong class="text-[var(--color-ink)] font-medium">your best person.</strong></p>
 
       <p>The experienced procurement manager who has a gut feel for demand. The warehouse supervisor who knows which products move slowly. The supply chain head who reads the news and worries about geopolitical risks.</p>
 
       <p>These people are brilliant. But they're also: limited by how many decisions they can make per day, prone to fatigue and inconsistency, unable to process data as fast as a machine, going on vacation sometimes, and eventually going to retire.</p>
 
-      <p>Loop engineering doesn't replace these people. It <strong>codifies their expertise into a system that runs 24/7</strong> and frees them to focus on the work that actually requires human judgment — negotiating with suppliers, building relationships, planning strategy, handling genuinely novel situations.</p>
+      <p>Loop engineering doesn't replace these people. It <strong class="text-[var(--color-ink)] font-medium">codifies their expertise into a system that runs 24/7</strong> and frees them to focus on the work that actually requires human judgment — negotiating with suppliers, building relationships, planning strategy, handling genuinely novel situations.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">The Real Cost Shift</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">The Real Cost Shift</h2>
 
       <p>Here's something most people don't talk about.</p>
 
       <p>Today, companies spend a fortune on AI infrastructure: data warehouses and pipelines to centralise information, multiple AI models for different tasks — demand forecasting, pricing, risk scoring, integration middleware connecting all these systems, dashboards where humans go to read AI outputs, and most expensive of all: the humans who sit between all these systems, reading outputs from one tool and typing inputs into another.</p>
 
-      <p>In a typical mid-size company, 60-70% of the "AI operations" budget goes to <strong>connecting things together and having humans bridge the gaps.</strong></p>
+      <p>In a typical mid-size company, 60-70% of the "AI operations" budget goes to <strong class="text-[var(--color-ink)] font-medium">connecting things together and having humans bridge the gaps.</strong></p>
 
       <p>Loop engineering collapses this stack. One reasoning agent connects directly to your systems through tool connections. It replaces multiple specialised AI models (for most use cases), custom middleware, and the human bottleneck in the middle.</p>
 
       <p>The result: roughly 40-45% lower AI operations cost — not because the technology is cheaper, but because you need far fewer pieces stitched together.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">A Quick Reality Check</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">A Quick Reality Check</h2>
 
-      <p>Let me be honest about what loop engineering is <strong>not</strong>.</p>
+      <p>Let me be honest about what loop engineering is <strong class="text-[var(--color-ink)] font-medium">not</strong>.</p>
 
-      <p><strong>It's not a magic button.</strong> You can't just "turn on a loop" and expect everything to work. Designing a good loop requires deep understanding of your business, your data, and your processes.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">It's not a magic button.</strong> You can't just "turn on a loop" and expect everything to work. Designing a good loop requires deep understanding of your business, your data, and your processes.</p>
 
-      <p><strong>It's not for everything.</strong> Simple, repetitive tasks are still better handled by basic automation. One-off creative or strategic decisions still need human brains. Use the right tool for the right job.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">It's not for everything.</strong> Simple, repetitive tasks are still better handled by basic automation. One-off creative or strategic decisions still need human brains. Use the right tool for the right job.</p>
 
-      <p><strong>It doesn't fix bad data.</strong> If your inventory counts are wrong, the loop will confidently make wrong decisions — faster than a human ever could. High-quality, real-time data is essential.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">It doesn't fix bad data.</strong> If your inventory counts are wrong, the loop will confidently make wrong decisions — faster than a human ever could. High-quality, real-time data is essential.</p>
 
-      <p><strong>It still needs humans.</strong> But the human role changes. From executing the loop to <strong>designing and improving</strong> the loop. From doing the work to <strong>making the work better.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">It still needs humans.</strong> But the human role changes. From executing the loop to <strong class="text-[var(--color-ink)] font-medium">designing and improving</strong> the loop. From doing the work to <strong class="text-[var(--color-ink)] font-medium">making the work better.</strong></p>
 
-      <p><strong>It's early.</strong> We're in the very first innings of loop engineering outside of software development. The tools are maturing rapidly, but the playbooks for supply chain loops are still being written.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">It's early.</strong> We're in the very first innings of loop engineering outside of software development. The tools are maturing rapidly, but the playbooks for supply chain loops are still being written.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">Where This Is Heading</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">Where This Is Heading</h2>
 
       <p>If I had to bet on what the next three years look like:</p>
 
-      <p><strong>2026-2027:</strong> Early adopters in e-commerce and perishable goods start running loops for inventory management and pricing. Results are impressive but isolated.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">2026-2027:</strong> Early adopters in e-commerce and perishable goods start running loops for inventory management and pricing. Results are impressive but isolated.</p>
 
-      <p><strong>2027-2028:</strong> Platform tools emerge that let non-technical operations managers design loops visually — without needing developers. Loop design becomes a skill, like spreadsheet modelling was in the 1990s.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">2027-2028:</strong> Platform tools emerge that let non-technical operations managers design loops visually — without needing developers. Loop design becomes a skill, like spreadsheet modelling was in the 1990s.</p>
 
-      <p><strong>2028-2029:</strong> Supply chain loops become standard. Companies without them can't compete on speed, cost, or responsiveness. The gap between "loop companies" and "workflow companies" becomes as stark as the gap between "digital" and "analogue" was a decade ago.</p>
+      <p><strong class="text-[var(--color-ink)] font-medium">2028-2029:</strong> Supply chain loops become standard. Companies without them can't compete on speed, cost, or responsiveness. The gap between "loop companies" and "workflow companies" becomes as stark as the gap between "digital" and "analogue" was a decade ago.</p>
 
       <p>The companies that start learning this pattern now — even at a small scale — will have a compounding advantage. Because loops learn. And the earlier you start learning, the further ahead you are.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <h2 class="text-xl font-bold mt-8 mb-4">The One Thing to Take Away</h2>
+      <h2 class="font-serif font-semibold text-[1.35rem] leading-[1.2] text-[var(--color-ink)] mt-10 mb-3">The One Thing to Take Away</h2>
 
-      <p>Automation made machines follow rules. Prompt engineering made AI answer questions. Workflow engineering made AI follow processes. Loop engineering makes AI <strong>run your operations.</strong></p>
+      <p>Automation made machines follow rules. Prompt engineering made AI answer questions. Workflow engineering made AI follow processes. Loop engineering makes AI <strong class="text-[var(--color-ink)] font-medium">run your operations.</strong></p>
 
       <p>Each era built on the last. None of them replaced the previous one entirely. But the direction is unmistakable:</p>
 
-      <p><strong>The human role is moving from doing the work to designing the system that does the work.</strong></p>
+      <p><strong class="text-[var(--color-ink)] font-medium">The human role is moving from doing the work to designing the system that does the work.</strong></p>
 
       <p>That's not a threat. That's leverage.</p>
 
       <p>The supply chain manager who learns to design loops will be more valuable — not less — because they'll be running a system that handles 500 decisions a day while they focus on the five decisions that actually matter.</p>
 
-      <hr class="border-[var(--color-border)]" />
+      <hr class="border-[var(--color-border)] my-8" />
 
-      <p><em>If you found this useful, share it with someone in operations or supply chain who's wondering what comes next after ChatGPT. They'll thank you later.</em></p>
+      <p class="italic text-[var(--color-ink-secondary)]">If you found this useful, share it with someone in operations or supply chain who's wondering what comes next after ChatGPT. They'll thank you later.</p>
 
-      <p><em>Got questions? Disagree with something? I'd love to hear your take. Reach me at <a href="mailto:contactzope@gmail.com">contactzope@gmail.com</a>.</em></p>
+      <p class="italic text-[var(--color-ink-secondary)]">Got questions? Disagree with something? I'd love to hear your take. Reach me at <a href="mailto:contactzope@gmail.com" class="text-[var(--color-ink)] underline underline-offset-3 decoration-[var(--color-accent-light)] hover:decoration-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all duration-200">contactzope@gmail.com</a>.</p>
 
     </div>
   </article>
