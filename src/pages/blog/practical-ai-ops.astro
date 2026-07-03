@@ -1,276 +1,287 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/intelligence-stack.css';
+import '../../styles/blog.css';
 ---
 
-<Layout title="A Practical Framework for Building Operational Loops | Vipul Zope" description="A phased, no-hype framework for applying loop engineering to operations and supply chain — with cost estimates, readiness criteria, and honest expectations.">
+<Layout title="The Playbook: What an Operations Team Would Actually Build | Vipul Zope" description="A practical, phased framework for implementing continuous decision systems in operations — with guardrails, honest cost discussion, and a running case study.">
 
   <article>
 
-    <header class="is-hero">
-      <h1>A Practical Framework for Building <em>Operational</em> Loops</h1>
-      <p class="hero-sub">What to build, in what order, at what cost, and with what expectations — a phased approach grounded in what actually works today, not what might work someday.</p>
+    <header class="hero">
+      <h1>The Playbook: What an Operations Team Would <em>Actually</em> Build</h1>
+      <p class="hero-sub">Assuming you've read the evolution and the honest assessment — here's the practical path. What to build, in what order, with what guardrails, and with what expectations.</p>
       <div class="hero-meta">
-        <span>14 min read</span>
+        <span>12 min read</span>
         <span>July 2026</span>
         <span>Operations · Supply Chain · Implementation</span>
       </div>
     </header>
 
-    <div class="is-prose">
-      <p class="lead">In Part 1, the evolution from rules to loops. In Part 2, an honest look at what's real and what's hype. This part is about action: if you accept that the pattern has value — with the caveats covered in Part 2 — what do you actually do about it?</p>
+    <div class="prose">
+      <p class="lead">Parts 1 and 2 covered the evolution and the critical analysis. This piece is for people who've absorbed both and are now asking: if I accept that the pattern is real but limited — what would I actually do about it?</p>
 
-      <p>A note on perspective: this framework is synthesised from published work by Huntley, Osmani, and Ng, practitioner accounts, and the operational realities described by supply chain professionals. Where I'm estimating rather than citing demonstrated results, I'll say so.</p>
+      <p>Instead of abstract frameworks, I'm going to walk through what FreshRoute — the produce distributor from Parts 1 and 2 — would do if they decided to implement this. The phases, the guardrails, the failures they'd encounter, and the honest cost considerations.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>Before Anything: A Readiness Check</h2>
-      <h4>Not every organisation should start here</h4>
+    <div class="prose">
+      <h2>Step Zero: Are the Foundations Ready?</h2>
 
-      <p>Building loops on top of unreliable data or disconnected systems will amplify problems, not solve them. Before considering loops, honestly assess the foundations.</p>
+      <p>Before anything else, an honest assessment. Building continuous decision systems on top of unreliable data amplifies problems. It doesn't solve them.</p>
     </div>
 
-    <div class="is-readiness">
-      <div class="is-readiness-col green">
-        <h4>Ready to Build Loops</h4>
+    <div class="readiness">
+      <div class="readiness-col green">
+        <h4>Ready to Build</h4>
         <ul>
           <li>Inventory data is accurate and updated in real time</li>
-          <li>ERP and marketplace systems have accessible APIs</li>
-          <li>Team already uses AI tools in daily work</li>
-          <li>Someone understands both operations and data on the team</li>
+          <li>Core systems have accessible APIs</li>
+          <li>Team already uses AI tools informally</li>
+          <li>Someone bridges operations and data on the team</li>
           <li>You can define what "good" looks like for key decisions</li>
         </ul>
       </div>
-      <div class="is-readiness-col amber">
-        <h4>Ready for Workflows, Not Yet Loops</h4>
+      <div class="readiness-col amber">
+        <h4>Ready for Workflows First</h4>
         <ul>
-          <li>Data exists but is spread across spreadsheets and silos</li>
+          <li>Data exists but lives across spreadsheets and silos</li>
           <li>Some systems have APIs, others don't</li>
-          <li>Team uses AI informally but hasn't structured it</li>
-          <li>No one bridges operations and data formally</li>
+          <li>Team uses AI ad hoc but hasn't structured it</li>
           <li>Verification criteria would need to be designed from scratch</li>
+          <li>No one formally bridges operations and data</li>
         </ul>
       </div>
-      <div class="is-readiness-col red">
+      <div class="readiness-col red">
         <h4>Fix Foundations First</h4>
         <ul>
           <li>Inventory accuracy below 90%</li>
           <li>Core systems lack integration capabilities</li>
           <li>No team member has used AI tools at work</li>
           <li>Processes are undocumented or inconsistent</li>
-          <li>Basic supply chain firefighting is still daily reality</li>
+          <li>Daily firefighting still dominates the schedule</li>
         </ul>
       </div>
     </div>
 
-    <div class="is-callout">
-      <span class="is-callout-label">If you're in the red column</span>
-      <p>That's not a failure — it's useful clarity. Your next investment should be data quality, system integration, and AI literacy. The loops will still be there when the foundations are ready.</p>
+    <div class="callout">
+      <span class="callout-label">If you're in the amber or red columns</span>
+      <p>That's not a failure — it's clarity about where to invest next. Data quality, system integration, and AI literacy come first. The continuous decision systems will still be there when the foundations are ready.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>Which Processes Should Get Loops?</h2>
-      <h4>A four-question filter</h4>
+    <div class="prose">
+      <h2>Which Processes Go First?</h2>
 
-      <p>Not every process benefits from a loop. Based on the frameworks covered in Parts 1 and 2, I'd evaluate candidates against four criteria:</p>
+      <p>Not every process benefits from continuous decision-making. FreshRoute would evaluate candidates against four questions:</p>
 
-      <p><strong>1. Repetition frequency.</strong> How often does this decision happen? Processes that run daily or more justify loop engineering. Monthly processes probably don't.</p>
+      <p><strong>Frequency.</strong> How often does this decision happen? Daily or more justifies the investment. Monthly probably doesn't.</p>
 
-      <p><strong>2. Verification clarity.</strong> Can you objectively determine whether the output was good? If yes — stockout rate, delivery timeliness, cost variance — the loop can self-correct. If no — "was this the right strategic call?" — keep a human at that step.</p>
+      <p><strong>Verification clarity.</strong> Can you objectively measure whether the decision was good? Stockout rates and delivery timeliness are measurable. "Was this the right strategic call?" isn't.</p>
 
-      <p><strong>3. Cost of a wrong decision.</strong> "$200 overpaid on one order" is acceptable risk for autonomous execution. "Lose a key supplier relationship" requires human approval.</p>
+      <p><strong>Cost of being wrong.</strong> Overpaying by a small margin on one order is acceptable risk. Losing a key supplier relationship isn't.</p>
 
-      <p><strong>4. Data accessibility.</strong> Does the loop have access to the data it needs? If the information lives in someone's head or in an email attachment, the loop can't use it.</p>
+      <p><strong>Data accessibility.</strong> Does the system have access to the information it needs? If the critical data lives in someone's memory or in an email attachment, the system can't use it.</p>
     </div>
 
-    <div class="is-table-wrap">
-      <span class="is-table-caption">Operations processes ranked by loop readiness</span>
+    <div class="table-wrap">
+      <span class="table-caption">FreshRoute's process ranking</span>
       <table>
         <thead>
           <tr><th>Process</th><th>Frequency</th><th>Verifiable?</th><th>Risk</th><th>Data?</th><th>Readiness</th></tr>
         </thead>
         <tbody>
-          <tr><td>Inventory reorder (steady-state)</td><td>Daily</td><td>Yes</td><td>Low-Med</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
-          <tr><td>Data quality monitoring</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
-          <tr><td>Shipment exception alerts</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:#3a7d44;font-weight:600">High</td></tr>
-          <tr><td>Demand-based pricing</td><td>Daily</td><td>Partially</td><td>Medium</td><td>Mostly</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
-          <tr><td>Supplier risk monitoring</td><td>Daily</td><td>Partially</td><td>Med-High</td><td>Partially</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
-          <tr><td>Perishable goods allocation</td><td>Daily</td><td>Yes</td><td>Medium</td><td>Yes</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
-          <tr><td>Returns processing routing</td><td>Daily</td><td>Partially</td><td>Low-Med</td><td>Yes</td><td style="color:#b8732a;font-weight:600">Medium</td></tr>
-          <tr><td>Supplier negotiation</td><td>Quarterly</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:#c44b4b;font-weight:600">Low</td></tr>
-          <tr><td>New product assortment</td><td>Seasonal</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:#c44b4b;font-weight:600">Low</td></tr>
+          <tr><td>Steady-seller reordering</td><td>Daily</td><td>Yes</td><td>Low-Med</td><td>Yes</td><td style="color:var(--green);font-weight:600">High</td></tr>
+          <tr><td>Inventory discrepancy alerts</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:var(--green);font-weight:600">High</td></tr>
+          <tr><td>Delivery exception monitoring</td><td>Continuous</td><td>Yes</td><td>Low</td><td>Yes</td><td style="color:var(--green);font-weight:600">High</td></tr>
+          <tr><td>Weather-driven demand adjustment</td><td>Daily</td><td>Partially</td><td>Medium</td><td>Mostly</td><td style="color:var(--accent);font-weight:600">Medium</td></tr>
+          <tr><td>Perishable spoilage routing</td><td>Daily</td><td>Yes</td><td>Medium</td><td>Yes</td><td style="color:var(--accent);font-weight:600">Medium</td></tr>
+          <tr><td>Supplier negotiation support</td><td>Quarterly</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:var(--red);font-weight:600">Low</td></tr>
+          <tr><td>New restaurant onboarding</td><td>Monthly</td><td>Difficult</td><td>High</td><td>Partially</td><td style="color:var(--red);font-weight:600">Low</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="is-prose">
-      <p>Start with the green items. Build confidence. Expand gradually.</p>
+    <div class="section-rule"><hr></div>
+
+    <div class="prose">
+      <h2>How FreshRoute Would Roll This Out</h2>
+      <h4>Four phases, each building on the last</h4>
+
+      <p>The key design principle, drawn from Ng's hierarchical architecture: use <strong>multiple systems at different time scales</strong>, each with a level of human involvement matched to the complexity of the decision.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
-
-    <div class="is-prose">
-      <h2>The Four Phases</h2>
-      <h4>Based on Ng's time-scale hierarchy, adapted for operations</h4>
-
-      <p>The key insight from Ng's framework is that effective systems use <strong>multiple loops at different time scales</strong> — not one monolithic autonomous system. I'd apply this directly to operations.</p>
+    <div class="phase-card">
+      <span class="phase-num">Phase 1 — Months 1 to 2</span>
+      <h3>The 6 AM Briefing</h3>
+      <p><strong>What FreshRoute builds:</strong> A nightly system that pulls inventory data from all three warehouses, ingests the previous day's restaurant orders, cross-references with a seven-day weather forecast, and generates a structured morning summary for Priya.</p>
+      <p>The summary flags: products approaching safety stock thresholds, unusual ordering patterns from specific restaurants, weather conditions likely to affect demand or supply, and any delivery anomalies from the previous day.</p>
+      <p><strong>What it does not do:</strong> Take any action. It monitors, analyses, and reports. Priya reads it over chai and decides what to do.</p>
+      <p><strong>Why this comes first:</strong> No execution risk. The team builds trust in AI-generated operational intelligence. Data connections get validated in a low-stakes environment.</p>
+      <p><strong>What happens in practice:</strong> In the first week, the system flags that Restaurant 47 — a large account — has been ordering 40% less paneer than usual for ten days straight. Priya hadn't noticed. She calls them. Turns out their chef left and the new one prefers a different supplier's paneer. She saves the account by adjusting her approach. Without the system, she might have noticed in month two — when the account was already gone.</p>
     </div>
 
-    <div class="is-phase-card">
-      <span class="is-phase-num">Phase 1 — Months 1 to 2</span>
-      <h3>The Morning Briefing Loop</h3>
-      <p><strong>What to build:</strong> A scheduled loop that monitors inventory and sales data overnight and generates a structured morning summary. Anomalies flagged, trends highlighted, data presented clearly.</p>
-      <p><strong>What it does not do:</strong> Take any autonomous action. It monitors, analyses, and reports. A human reads the summary and decides what to do.</p>
-      <p><strong>Why this first:</strong> You're building the monitoring capability without execution risk. The team gets comfortable with AI-generated operational summaries. Data connections are validated. This corresponds to Ng's "fast loop" — frequent, verifiable, low-risk.</p>
-      <p><strong>Success measure:</strong> The summary surfaces at least 80% of the issues the team was catching manually.</p>
+    <div class="phase-card">
+      <span class="phase-num">Phase 2 — Months 3 to 4</span>
+      <h3>The Advisor</h3>
+      <p><strong>What FreshRoute builds:</strong> The morning briefing now includes specific recommendations. When a stockout risk is detected, the system doesn't just flag it — it recommends a reorder quantity, suggests which supplier to use based on recent delivery performance and current pricing, and estimates the cost.</p>
+      <p><strong>What it does not do:</strong> Execute anything. Every recommendation requires Priya's review.</p>
+      <p><strong>What happens in practice:</strong> During the first month, Priya accepts most recommendations but overrides the supplier choice about 30% of the time. The system recommends Supplier A because they're cheapest. Priya chooses Supplier B because she knows Supplier A's quality drops during monsoon season — a detail that exists in her experience, not in any database.</p>
+      <p>This is Ng's "context advantage" in action. The system is fast and data-driven. Priya is slow and context-rich. Together, they're better than either alone.</p>
+      <p><strong>The critical output:</strong> Every time Priya overrides a recommendation, her team records why. That "why" becomes the knowledge that improves future recommendations — not through automatic learning, but through deliberate encoding of operational wisdom.</p>
     </div>
 
-    <div class="is-phase-card">
-      <span class="is-phase-num">Phase 2 — Months 3 to 4</span>
-      <h3>The Advisor Loop</h3>
-      <p><strong>What to build:</strong> Extend the monitoring loop to include recommendations. When a stockout risk is detected, the loop recommends a specific reorder quantity, supplier, and timing — with reasoning.</p>
-      <p><strong>What it does not do:</strong> Execute autonomously. Every recommendation requires human review before any action.</p>
-      <p><strong>Why this second:</strong> You're testing the quality of the loop's reasoning. Where recommendations align with experienced operators' judgment, trust builds. Where they don't, you discover what knowledge needs to be better encoded into the loop's inputs — what Huntley calls the "preparation."</p>
-      <p><strong>Success measure:</strong> Operators accept at least 70% of recommendations without modification. Where they modify, the "why" is captured to improve the loop's knowledge base.</p>
-    </div>
-
-    <div class="is-phase-card">
-      <span class="is-phase-num">Phase 3 — Months 5 to 8</span>
-      <h3>The Guarded Autonomous Loop</h3>
-      <p><strong>What to build:</strong> For low-risk, high-frequency processes — reordering steady-state products from pre-approved suppliers below a dollar threshold — allow autonomous execution.</p>
+    <div class="phase-card">
+      <span class="phase-num">Phase 3 — Months 5 to 8</span>
+      <h3>The Guarded Operator</h3>
+      <p><strong>What FreshRoute builds:</strong> For their most predictable decisions — reordering steady-selling products (tomatoes, onions, potatoes) from their two most reliable suppliers, below a defined cost threshold — the system can now execute autonomously. Priya reviews a summary each morning instead of approving each order individually.</p>
       <p><strong>The guardrails:</strong></p>
       <ul>
-        <li><strong>Dollar cap:</strong> Autonomous execution only below a defined threshold (e.g., $5,000). Above that — human approval required.</li>
-        <li><strong>Supplier whitelist:</strong> Only with pre-vetted, historically reliable suppliers.</li>
-        <li><strong>Volume cap:</strong> Cannot increase order quantity by more than 30% over the previous order without human approval.</li>
-        <li><strong>Kill switch:</strong> Any team member can pause the loop immediately.</li>
-        <li><strong>Daily audit:</strong> A human reviews the loop's actions every morning.</li>
+        <li><strong>Cost cap:</strong> Autonomous execution only for orders below a set threshold per supplier per day. Above that — Priya's approval required.</li>
+        <li><strong>Supplier whitelist:</strong> Only the two suppliers with the strongest delivery track record qualify for autonomous ordering. Everyone else stays in the approval flow.</li>
+        <li><strong>Volume ceiling:</strong> The system cannot increase any order by more than 25% over the previous order without approval. This prevents runaway ordering driven by anomalous data.</li>
+        <li><strong>Kill switch:</strong> Any team member can pause the system immediately with a single action.</li>
+        <li><strong>Daily audit:</strong> Priya reviews every autonomous decision each morning. Any anomaly gets flagged and the reasoning gets logged.</li>
       </ul>
-      <p><strong>Why these specific guardrails:</strong> Each one addresses a failure mode identified in Part 2. Dollar caps prevent expensive mistakes. Volume caps prevent runaway orders. The kill switch addresses the drift problem. The daily audit provides the "context advantage" Ng described.</p>
-      <p><strong>Success measure:</strong> Lower stockout rate AND equivalent or lower overstock compared to the previous manual process — measured over eight weeks.</p>
+      <p><strong>What happens in practice:</strong> It works well for three weeks. Then, during a local festival, the system increases tomato orders by 20% across two consecutive days — within the guardrails but more than Priya would have ordered. She catches it in the morning audit, adjusts the volume ceiling for festival periods, and the system handles the next festival correctly because the rule was encoded.</p>
+      <p>This is the pattern: the system handles routine decisions, Priya catches edge cases, and each edge case becomes a rule that prevents future errors. Not automatic learning — <strong>human-directed improvement.</strong></p>
     </div>
 
-    <div class="is-phase-card">
-      <span class="is-phase-num">Phase 4 — Months 9 to 12 plus</span>
-      <h3>The Outcome-Informed Loop</h3>
-      <p><strong>What to build:</strong> Extend to additional processes. Implement outcome tracking so the loop can reference results of prior decisions.</p>
-      <p><strong>What "learning" actually looks like — the honest version:</strong></p>
+    <div class="phase-card">
+      <span class="phase-num">Phase 4 — Months 9 onward</span>
+      <h3>The Outcome-Informed System</h3>
+      <p><strong>What FreshRoute builds:</strong> Extended to weather-driven demand adjustments and perishable spoilage routing. Implemented outcome tracking — the system now has access to the results of prior decisions.</p>
+      <p><strong>What "outcome-informed" actually looks like:</strong></p>
       <ul>
-        <li>When the loop ordered 500 units and 120 remained unsold after 60 days — that fact is recorded in the loop's knowledge base.</li>
-        <li>When the loop chose Supplier B and Supplier B delivered late — that is recorded.</li>
-        <li>The loop references these records in future reasoning.</li>
-        <li><strong>But a human reviews the pattern and decides whether to adjust the loop's parameters.</strong> The loop doesn't autonomously rewrite its own rules.</li>
+        <li>When the system ordered 400 kg of coriander and 80 kg spoiled after three days — that fact is recorded and referenced when the system next calculates coriander quantities.</li>
+        <li>When Supplier B's delivery arrived two days late for the third time in a month — that pattern is recorded and influences future supplier selection.</li>
+        <li>When a demand forecast proved accurate for a weather-driven spike — the approach is noted for future weather events.</li>
       </ul>
-      <p><strong>Why this approach:</strong> This prevents the three failure modes from Part 2 — drift, reward hacking, and flawed logic persistence. The loop has memory. It references outcomes. But a human controls the response. Is this as appealing as "the AI learns by itself"? No. Does it actually work? Based on everything available — yes.</p>
-      <p><strong>Success measure:</strong> Measurable improvement in decision quality over a three-month period — lower stockouts, better margins, fewer emergency orders.</p>
+      <p><strong>The principle:</strong> The system has memory. It references outcomes. But Priya controls the response. When the system notes that coriander orders have been consistently 15% too high, Priya decides whether to adjust the reorder formula, change the safety stock threshold, or investigate whether a restaurant's usage pattern changed. The system surfaces the pattern. The human decides what it means.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>The Verification Architecture</h2>
-      <h4>The most important design decision</h4>
+    <div class="prose">
+      <h2>What Went Wrong Along the Way</h2>
+      <h4>Because every implementation has failures worth sharing</h4>
 
-      <p>In Part 2, verification was identified as the hardest problem. Here's a practical approach, structured in three tiers:</p>
+      <p>In month three, FreshRoute's system got stuck in a reasoning loop. It detected a potential supplier delay, tried to calculate alternative sourcing, found that all alternatives were more expensive, tried to optimise for cost, detected the original delay again, and cycled. By the time Priya's team noticed the next morning, the system had made dozens of API calls without producing a recommendation. The token cost for that single incident was modest — but it demonstrated a real failure mode.</p>
 
-      <h3>Tier 1: Deterministic — automate fully</h3>
-      <p>Outputs that can be verified with objective, instant checks: Did the order arrive on the expected date? Is the inventory count within 2% of the physical count? Did the reorder stay within budget? Build automated verification for these. No human needed.</p>
+      <p>The fix: a circuit breaker. If the system doesn't converge on a recommendation within a defined number of iterations, it stops, logs the unsolved problem, and sends an alert. A human resolves it.</p>
 
-      <h3>Tier 2: Outcome-based — automate with delay</h3>
-      <p>Outcomes that take time to materialise: Did the reorder result in stockouts or excess? (Measurable after 30–60 days.) Did the pricing adjustment improve margin? (Measurable after 2–4 weeks.) Build tracking systems that feed these outcomes back into the loop's knowledge base — not for automatic self-correction, but for human review and parameter adjustment.</p>
+      <p>In month five, the system recommended reordering a product from Supplier A based on strong sales data. What the data didn't show: Supplier A had recently changed their packaging, and three restaurants had complained about quality. Priya knew this. The system didn't. She overrode the recommendation and added a "recent quality complaints" field to the supplier profile.</p>
 
-      <h3>Tier 3: Judgment-based — keep human</h3>
-      <p>Decisions requiring contextual judgment that cannot be automated: Is this the right supplier given geopolitical dynamics? Should we absorb a cost increase to maintain a strategic relationship? Use the loop to prepare data and analysis. Let a human make the call.</p>
+      <p>These failures aren't embarrassments. They're the mechanism by which the system gets better — each one creates a rule, a guardrail, or a data point that prevents recurrence. The goal isn't a system that never fails. It's a system where <strong>each failure teaches something permanent.</strong></p>
     </div>
 
-    <div class="is-pull-quote">
-      <blockquote>Design the verification before you design the loop. If you can't clearly define what "good" looks like for a given decision, you can't build a reliable loop around it.</blockquote>
+    <div class="section-rule"><hr></div>
+
+    <div class="prose">
+      <h2>The Guardrails That Actually Matter</h2>
+
+      <p>From FreshRoute's experience and the failure modes identified in Part 2, these are the guardrails that make continuous operational systems safe:</p>
+
+      <p><strong>Cost ceilings</strong> — prevent expensive mistakes by capping autonomous decision value.</p>
+
+      <p><strong>Volume limits</strong> — prevent runaway ordering by capping how much any single decision can change from the previous one.</p>
+
+      <p><strong>Iteration limits</strong> — prevent stuck loops by forcing the system to stop and alert after a defined number of reasoning cycles.</p>
+
+      <p><strong>Supplier scope</strong> — restrict autonomous execution to pre-vetted, historically reliable partners.</p>
+
+      <p><strong>Kill switches</strong> — allow any team member to pause the system immediately.</p>
+
+      <p><strong>Daily audits</strong> — ensure a human reviews every autonomous decision, catching edge cases before they compound.</p>
+
+      <p><strong>Override logging</strong> — capture every time a human disagrees with the system, and why. This is the raw material for improvement.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>The Cost Picture</h2>
-      <h4>Honest estimates — with uncertainty acknowledged</h4>
+    <div class="prose">
+      <h2>What This Actually Costs</h2>
+      <h4>Honest directional guidance — not precise figures</h4>
 
-      <p>These are estimates based on current API pricing, published case studies, and practitioner accounts. Actual costs will vary significantly depending on scale, complexity, and implementation quality.</p>
+      <p>I want to be straightforward: costs vary dramatically depending on company size, existing infrastructure, decision volume, and architecture choices. Specific dollar figures would be misleading. What's useful is understanding the cost structure.</p>
+
+      <p><strong>The costs that go down:</strong> Multiple specialised AI models can often be consolidated. Custom integration middleware becomes less necessary when a reasoning system connects directly to business tools. Human labour spent on routine decision execution shifts to higher-value oversight work.</p>
+
+      <p><strong>The costs that go up:</strong> AI API calls for reasoning — this is the new cost category that most early estimates undercount. Loop design and maintenance requires skilled people. Monitoring and governance tooling.</p>
+
+      <p><strong>The costs that are unpredictable:</strong> Token consumption from stuck loops, multi-agent debates, and reasoning overkill. These can spike unexpectedly if the system isn't designed with circuit breakers and cost caps.</p>
+
+      <p><strong>The architectural choice that changes everything:</strong> Using smaller, specialised models for routine decisions and frontier models only for complex reasoning can shift the economics significantly. Running certain models locally — on dedicated hardware rather than through cloud APIs — is another approach that some organisations are exploring to control costs while maintaining data privacy.</p>
+
+      <p>The net result depends entirely on implementation quality. Poorly designed systems cost more than the manual processes they replace. Well-designed systems create savings that compound over time as the system accumulates operational knowledge.</p>
     </div>
 
-    <div class="is-table-wrap">
-      <span class="is-table-caption">Estimated annual cost — mid-size e-commerce operation</span>
-      <table>
-        <thead>
-          <tr><th>Category</th><th>Current (Workflows + AI)</th><th>With Loops (Phase 3)</th><th>With Loops (Phase 4)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Data infrastructure</td><td>$300–500K</td><td>$250–400K</td><td>$200–350K</td></tr>
-          <tr><td>AI/ML models</td><td>$200–500K</td><td>$100–250K</td><td>$80–200K</td></tr>
-          <tr><td>Integration</td><td>$100–300K</td><td>$60–150K</td><td>$40–100K</td></tr>
-          <tr><td>AI API costs (reasoning)</td><td>$20–80K</td><td>$60–180K</td><td>$100–300K</td></tr>
-          <tr><td>Human decision labour</td><td>$300–600K</td><td>$200–400K</td><td>$150–300K</td></tr>
-          <tr><td>Loop design &amp; maintenance</td><td>$0</td><td>$80–150K</td><td>$50–100K</td></tr>
-          <tr><td><strong>Total</strong></td><td><strong>$920K–$1.98M</strong></td><td><strong>$750K–$1.53M</strong></td><td><strong>$620K–$1.35M</strong></td></tr>
-        </tbody>
-      </table>
+    <div class="section-rule"><hr></div>
+
+    <div class="prose">
+      <h2>What Skills This Actually Requires</h2>
+
+      <p>Continuous decision systems don't require an operations team to become programmers. But they do require capabilities that combine domain knowledge with systems thinking:</p>
+
+      <p><strong>Verification design</strong> — defining what "good" looks like for each decision, in measurable terms. This is the most valuable skill in this entire domain. Priya knows what a good reorder decision looks like. The skill is translating that knowledge into criteria a system can check.</p>
+
+      <p><strong>Guardrail design</strong> — understanding both what the system can do and where it can go wrong, and setting boundaries accordingly.</p>
+
+      <p><strong>Context encoding</strong> — translating operational wisdom (the kind that lives in experienced people's heads) into structured knowledge that a system can reference. Priya's monsoon-season supplier quality knowledge. Her festival-period demand intuition. Her restaurant-by-restaurant behavioural patterns.</p>
+
+      <p><strong>Outcome interpretation</strong> — reading the system's decision logs, identifying patterns, and deciding what adjustments to make. Not retraining a model. Updating the rules, knowledge base, and guardrails based on evidence.</p>
+
+      <p>The person who does all of this well isn't a data scientist or an operations manager. They're someone who understands both domains — and can translate between them. That combination, in my view, will be one of the most valuable skill sets in operations over the next decade.</p>
     </div>
 
-    <div class="is-prose">
-      <p><strong>Net savings estimate: 15–30% of current AI operations spend.</strong> Not the 40–45% sometimes claimed — and token costs go up as you add more loops. The net depends heavily on implementation quality.</p>
+    <div class="section-rule"><hr></div>
 
-      <p>The indirect savings are harder to quantify but likely larger: reduced stockouts, reduced overstock, reduced emergency freight, reduced spoilage. Even a 20% improvement in these areas can represent hundreds of thousands of dollars — numbers that dwarf the direct infrastructure savings.</p>
+    <div class="prose">
+      <h2>Where This Goes From Here</h2>
 
-      <p>These are estimates. Model your specific situation before committing resources.</p>
+      <p>If current trends continue — and that's an important qualifier — one possible trajectory looks like this:</p>
+
+      <p><strong>Near term:</strong> Companies with strong data foundations begin running verified monitoring and assisted decision systems for their highest-frequency operational processes. The results are promising but require significant design effort.</p>
+
+      <p><strong>Medium term:</strong> Platform tools emerge that make this more accessible — visual design interfaces, pre-built connectors, guardrail templates. Designing continuous operational systems becomes a recognised professional skill.</p>
+
+      <p><strong>Longer term:</strong> Companies running well-designed operational systems will have measurable advantages in speed, cost, and responsiveness. The gap between organisations that have built this capability and those that haven't will become a competitive factor — though probably not as dramatic as some predict.</p>
+
+      <p>But predictions are cheap. What matters is the principle underneath all of this: <strong>the human role in operations is shifting from executing every decision to designing the system that handles routine decisions — and focusing human judgment where it's genuinely irreplaceable.</strong></p>
+
+      <p>That's not a threat. It's leverage. But only if the system is designed with honesty about what it can and can't do.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
-
-    <div class="is-prose">
-      <h2>What the Next Three Years Look Like</h2>
-
-      <p><strong>2026–2027:</strong> Early adopters in e-commerce and perishable goods begin running verified monitoring and assisted decision loops. Results are promising but require significant engineering effort. The companies that succeed are the ones that invested in data quality first.</p>
-
-      <p><strong>2027–2028:</strong> Platform tools emerge that let non-technical operations managers design loops visually — with pre-built connectors, guardrail templates, and verification frameworks. Loop design becomes a professional skill, similar to how spreadsheet modelling became one in the 1990s.</p>
-
-      <p><strong>2028–2029:</strong> Supply chain loops become standard in competitive industries. Companies running well-designed loops will have measurable advantages in speed, cost, and responsiveness. The gap between "loop-native" and "workflow-native" companies becomes significant.</p>
-
-      <p><strong>Uncertainty flagged:</strong> These timelines assume continued improvement in LLM reliability and reduction in API costs. If progress stalls on either front, adoption will be slower.</p>
+    <div class="pull-quote">
+      <blockquote>The difference between a system that works and one that doesn't isn't the technology. It's the verification criteria, the guardrails, and the quality of the human oversight at every level. The engineering matters more than the AI.</blockquote>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
-
-    <div class="is-prose">
-      <h2>The Takeaway Across All Three Parts</h2>
-
-      <p>One idea has been consistent across this entire series: <strong>the human role is shifting from executing operational work to designing the systems that do it.</strong></p>
-
-      <p>That shift is real. It's happening now. And it's not a threat — it's leverage.</p>
-
-      <p>But leverage applied carelessly creates damage. The operations leader who designs well-verified, carefully guarded loops will run a system that handles routine decisions while they focus on the ones that matter. The one who treats loops as a magic automation layer will accumulate drift, burn tokens, and blame the technology.</p>
-
-      <p>The difference isn't the tool. It's the engineering.</p>
-
-      <p>Start small. Start with verification. Start with the processes you understand best. The pattern will wait — but the organisations that start building experience with it now will be meaningfully ahead when it becomes the standard way operations works.</p>
-    </div>
-
-    <div class="is-pull-quote">
-      <blockquote>The direction is unmistakable: automation made machines follow rules, prompt engineering made AI answer questions, workflow engineering made AI follow processes, and loop engineering makes AI run operations — with humans designing and improving the system, not executing every step within it.</blockquote>
-    </div>
-
-    <div class="is-series-nav">
-      <h3>Series</h3>
+    <div class="ref-section">
+      <h3>Further Reading</h3>
       <ol>
-        <li><a href="/blog/rules-to-loops" style="color:inherit;text-decoration:none">From Rules to Loops: The Quiet Evolution of AI in Operations</a></li>
-        <li><a href="/blog/real-vs-hype" style="color:inherit;text-decoration:none">Loop Engineering: What's Real, What's Hype, and What's Unknown</a></li>
-        <li class="current">A Practical Framework for Building Operational Loops</li>
+        <li>Huntley, G. (2025). <a href="https://ghuntley.com/loop/" target="_blank" rel="noopener">Agentic Engineering and the Ralph Loop</a> — preparation practices, task decomposition, and external state management.</li>
+        <li>Osmani, A. (2026). <a href="https://addyosmani.com/blog/loop-engineering/" target="_blank" rel="noopener">Loop Engineering</a> — the anatomy of loop components (worktrees, skills, connectors, state).</li>
+        <li>Ng, A. (2026). <a href="https://www.deeplearning.ai/the-batch/issue-359" target="_blank" rel="noopener">The Batch, Issue 359</a> — nested feedback loops and the "context advantage."</li>
+        <li>Boyd, J. (1976). <a href="https://en.wikipedia.org/wiki/OODA_loop" target="_blank" rel="noopener">The OODA Loop</a> — the observe-orient-decide-act cycle from military strategy.</li>
+        <li>Deming, W.E. (1986). <em>Out of the Crisis</em> — the PDCA cycle in manufacturing quality management.</li>
+        <li>Ohno, T. (1988). <em>Toyota Production System</em> — the original operational feedback loop: standardise, execute, check, adjust.</li>
+        <li>Sutton, R. &amp; Barto, A. (2018). <em>Reinforcement Learning: An Introduction</em> — the reward function problem and why operational verification is fundamentally hard.</li>
+        <li>Wiener, N. (1948). <em>Cybernetics: Or Control and Communication in the Animal and the Machine</em> — the intellectual ancestor of all feedback-loop thinking.</li>
       </ol>
     </div>
 
-    <div class="is-author">
-      <p>This series is the product of extensive research, not production experience. If you're building operational loops — or have decided the pattern isn't right for your context — I'd value the perspective either way.</p>
+    <div class="series-nav">
+      <h3>Series</h3>
+      <ol>
+        <li><a href="/blog/rules-to-loops" style="color:inherit;text-decoration:none">The Quiet Shift: How AI Operations Moved from Rules to Loops</a></li>
+        <li><a href="/blog/real-vs-hype" style="color:inherit;text-decoration:none">The Honest Version: Separating Loop Engineering from Its Hype</a></li>
+        <li class="current">The Playbook: What an Operations Team Would Actually Build</li>
+      </ol>
+    </div>
+
+    <div class="author-block">
+      <p>If you're building something like this — or have decided the approach isn't right for your context — I'd value hearing your reasoning either way.</p>
       <a href="mailto:contactzope@gmail.com" class="cta">Get in Touch</a>
     </div>
 

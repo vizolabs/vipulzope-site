@@ -1,212 +1,182 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/intelligence-stack.css';
+import '../../styles/blog.css';
 ---
 
-<Layout title="From Rules to Loops: The Quiet Evolution of AI in Operations | Vipul Zope" description="How business operations evolved from rigid automation to adaptive AI systems — and why the latest shift matters more than most people realise.">
+<Layout title="The Quiet Shift: How AI Operations Moved from Rules to Loops | Vipul Zope" description="The story of how business operations evolved from rigid automation to adaptive AI systems — and why the latest shift matters more than most people realise.">
 
   <article>
 
-    <header class="is-hero">
-      <h1>From Rules to Loops: The Quiet Evolution of AI in <em>Operations</em></h1>
-      <p class="hero-sub">Every business that moves physical goods is running the same cycle: monitor, decide, act, repeat. The question is whether a human runs it — or a system. That question has evolved through four distinct eras. Here's the story.</p>
+    <header class="hero">
+      <h1>The Quiet Shift: How AI Operations Moved from <em>Rules</em> to <em>Loops</em></h1>
+      <p class="hero-sub">A story about four eras, one company, and the question nobody's asking honestly enough.</p>
       <div class="hero-meta">
-        <span>10 min read</span>
+        <span>8 min read</span>
         <span>July 2026</span>
         <span>Operations · AI · Supply Chain</span>
       </div>
     </header>
 
-    <div class="is-prose">
-      <p class="lead">There's a question that sits underneath every operations and supply chain conversation, even when nobody says it out loud: "We already use AI — we have dashboards, automation, ChatGPT drafting emails. What more is there?" The answer is: more than most people think. But to understand what's coming, it helps to understand what came before.</p>
+    <div class="prose">
+      <p class="lead">Every morning at 6 AM, Priya opens the same three tabs. The ERP for inventory. The marketplace dashboard for yesterday's sales. Her email for supplier confirmations. She cross-references, makes calculations in a spreadsheet, drafts purchase orders, and sends them out before most of her team arrives.</p>
 
-      <p>Over the past three decades, businesses have moved through four distinct eras of intelligent operations. Each era built on the last. None fully replaced the one before it. But the direction of travel is clear — and the latest shift has implications that go beyond what most people have considered.</p>
+      <p>Priya is the head of procurement at FreshRoute — a mid-sized fresh produce distributor serving 200 restaurants across a metro area. She manages 500 SKUs, 30 suppliers, and daily ordering cycles for products with shelf lives measured in days, not months. She is, by every measure, excellent at her job.</p>
 
-      <p>This is the first of three articles. Here, the evolution. In Part 2, an honest assessment of what's real and what's hype. In Part 3, a practical framework for what to actually do about it.</p>
+      <p>But here's what nobody talks about: Priya makes roughly 80 to 100 procurement decisions every day. She's been doing it for eleven years. Her instincts are extraordinary — she knows which restaurants over-order on weekends, which suppliers are unreliable when it rains, which products spike during cricket season. That knowledge lives in her head. On the day she retires, it walks out the door with her.</p>
+
+      <p>This is the story of how companies like FreshRoute are trying to solve that problem. It's not a story about technology replacing people. It's a story about how the relationship between humans and machines in business operations has evolved — through four distinct shifts — and where it's heading next.</p>
     </div>
 
-    <div class="is-prose">
-      <h2>Era 1: The Rule Follower</h2>
-      <h4>Automation · 1990s to 2015</h4>
+    <div class="section-rule"><hr></div>
 
-      <p>This is where it started. Automation meant one thing: <strong>if this happens, do that.</strong> A fixed rule triggers a fixed action. No judgment. No adaptation.</p>
+    <div class="prose">
+      <h2>The First Shift: Machines Follow Rules</h2>
 
-      <p>Customer places an order? Generate a shipping label. Inventory drops below 50 units? Send a reorder alert email. Payment fails? Flag the account.</p>
+      <p>One useful way to understand the evolution is through four eras. This isn't an accepted industry classification — it's a framework for making sense of a complicated shift. With that caveat:</p>
 
-      <p>This era gave the business world ERP systems from SAP and Oracle, warehouse management software, robotic process automation from UiPath and Blue Prism, and integration tools like Zapier. Thousands of businesses — probably most — still run on this foundation today.</p>
+      <p>The first era started in the 1990s and still dominates most businesses today. Automation meant one thing: <strong>if this happens, do that.</strong> A fixed trigger, a fixed action. SAP, Oracle, Zapier, UiPath — they all run on this principle. A human writes the rules. A machine executes them.</p>
 
-      <p>And it works. For predictable, repeatable tasks — generating invoices, updating inventory counts, routing approvals, sending confirmations — automation is fast, reliable, and cheap.</p>
+      <p>At FreshRoute, this looks like: when inventory for mangoes drops below 20 crates, send Priya a reorder alert. When a restaurant's payment is overdue by 15 days, flag the account. When a supplier confirms a delivery, update the expected stock count.</p>
+
+      <p>It works beautifully for predictable tasks. Generating invoices. Updating counts. Sending confirmations.</p>
+
+      <p>It falls apart the moment something unexpected happens. A restaurant calls to double their weekend order because of an event. The system doesn't know. A supplier's truck breaks down and delivery shifts from Tuesday to Thursday. The reorder rule doesn't adjust. A heat wave hits and demand for lettuce drops while demand for watermelon triples. The rules were written for normal weather.</p>
+
+      <p>For a long time, this was fine. The world moved slowly enough that rules could keep up. Then it didn't.</p>
     </div>
 
-    <div class="is-scenario">
-      <div class="is-scenario-head">Where It Breaks Down</div>
-      <p>A customer orders 200 units. There are 180 in stock and 40 arriving tomorrow morning. The warehouse team knows this. The system doesn't. The automation does what it was programmed to do: it either rejects the order or creates a partial shipment. Waiting one day would have solved the problem entirely.</p>
-      <p>A supplier in Shenzhen faces a port delay. The reorder rule doesn't know. It keeps sending purchase orders to the same supplier. Three weeks later, empty shelves and angry customers.</p>
-      <div class="outcome">
-        <span class="outcome-label">The limitation</span>
-        <p><strong>Automation follows rules. It doesn't think.</strong> For a long time, this was acceptable — the world moved slowly enough that rules could keep up. Then it didn't.</p>
-      </div>
-    </div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="prose">
+      <h2>The Second Shift: Machines Understand Questions</h2>
 
-    <div class="is-prose">
-      <h2>Era 2: The Conversation</h2>
-      <h4>Prompt Engineering · 2022 to 2025</h4>
+      <p>When ChatGPT launched in November 2022, something fundamental changed. For the first time, you could describe what you needed in plain language and receive intelligent output — analysis, recommendations, communications.</p>
 
-      <p>When ChatGPT launched in November 2022, the barrier to using AI collapsed. For the first time, you could describe what you needed in plain language and receive genuinely useful output — analysis, recommendations, communications, calculations.</p>
+      <p>Priya could now type: "Analyse last month's sales by restaurant segment and tell me which products are losing velocity." The AI would produce a report that would have taken a junior analyst a full day. She could ask it to draft supplier communications, compare pricing across sources, or identify seasonal patterns in her data.</p>
 
-      <p>Supply chain managers started typing things like: "Analyse this sales data and tell me which products are slowing down." "Draft an email to our supplier requesting a 30% order increase for the festive season." "Review these shipping costs and tell me where we're overspending."</p>
+      <p>The breakthrough wasn't the AI's intelligence. It was the accessibility. No coding required. No data science degree. Just the ability to ask a clear question.</p>
 
-      <p>The responses were often better than what a junior analyst could produce in a full day. And no coding was required — just the ability to ask a clear question. The skill that emerged wasn't programming. It was <strong>knowing what to ask.</strong></p>
-    </div>
+      <p>But every interaction required Priya to be present — to ask, to read, to validate, to act. If she was travelling on Monday, the analysis didn't happen. If she phrased the question differently than last week, the output changed, and her team got confused.</p>
 
-    <div class="is-callout">
-      <span class="is-callout-label">What most people missed</span>
-      <p>Prompt engineering is a <strong>conversation</strong>, not a system. You ask. The AI answers. You act. Then you ask again tomorrow. And the day after.</p>
-      <p>Every single interaction requires a human present — to ask, to read, to validate, to execute. If you're travelling on Monday, the analysis doesn't happen. If you phrase the question differently than last week, the output changes — and your team gets confused.</p>
       <p>The AI was intelligent. But it was sitting in a chat window, waiting for someone to talk to it.</p>
     </div>
 
-    <div class="is-pull-quote">
-      <blockquote>Prompt engineering made AI accessible. It didn't make AI autonomous. That distinction matters more than most people realise.</blockquote>
+    <div class="section-rule"><hr></div>
+
+    <div class="prose">
+      <h2>The Third Shift: Machines Follow Processes</h2>
+
+      <p>The next step was logical: instead of manually prompting the AI each time, design a process that uses AI at each step and runs automatically.</p>
+
+      <p>Platforms like LangChain, n8n, and CrewAI made it possible to chain AI steps together with logic, decision points, and tool integration. A procurement workflow might run every Monday at 6 AM — pulling inventory data, analysing sales trends, cross-referencing supplier lead times, drafting purchase orders, and routing them for Priya's approval — all before she finishes her morning tea.</p>
+
+      <p>A process that consumed half a day of skilled labour now ran in fifteen minutes with a quick human review. That's a genuine operational improvement.</p>
+
+      <p>But every step, every branch, every decision path — Priya's team had designed it in advance. The workflow was intelligent within its design and incapable of reasoning beyond it.</p>
+
+      <p>When a supplier offered a surprise discount on avocados, the workflow didn't know. It followed its Monday schedule. When a social media trend spiked demand for a particular product mid-week, the workflow wouldn't catch it until the following Monday. When a supplier consistently confirmed orders but delivered late — every single time — the workflow kept routing orders to them. Nobody had updated the scoring logic.</p>
+
+      <p>Workflow engineering automated the process. But the process itself was frozen in time.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>Era 3: The Process</h2>
-      <h4>Workflow Engineering · 2024 to 2026</h4>
+    <div class="prose">
+      <h2>The Fourth Shift: Machines Reason in Circles</h2>
 
-      <p>The logical next step: instead of manually prompting the AI every time, <strong>design a multi-step process that uses AI at each stage and runs automatically.</strong></p>
+      <p>This is where the story gets more complicated — and more interesting. What some people are calling "loop engineering" proposes something different: instead of designing a process, design a system that monitors, decides, acts, checks whether it worked, and adjusts — continuously.</p>
 
-      <p>Frameworks like LangChain and platforms like n8n, Dify, and CrewAI made it possible to chain AI steps together with logic, branching, and direct tool integration. A procurement workflow might look like this:</p>
+      <p>The cycle looks like this:</p>
 
-      <ol>
-        <li>Every Monday at 6 AM, pull inventory data from the ERP.</li>
-        <li>Pull 90-day sales trends from the marketplace.</li>
-        <li>AI analyses both and recommends which SKUs need reordering and in what quantity.</li>
-        <li>Cross-reference with budget constraints and supplier lead times.</li>
-        <li>Draft purchase orders.</li>
-        <li>Route to the procurement manager for approval.</li>
-        <li>Once approved, send to suppliers automatically.</li>
-        <li>Track confirmations and flag issues.</li>
-      </ol>
+      <ul>
+        <li><strong>Monitor</strong> — watch relevant data streams continuously, not on a fixed schedule</li>
+        <li><strong>Detect</strong> — identify when something needs attention through pattern reasoning, not just preset thresholds</li>
+        <li><strong>Decide</strong> — determine the best action using all available context</li>
+        <li><strong>Act</strong> — execute the decision directly into business systems</li>
+        <li><strong>Verify</strong> — check whether the action achieved the intended result</li>
+        <li><strong>Learn</strong> — record the outcome and use it to inform future decisions</li>
+      </ul>
 
-      <p>A process that consumed half a day of skilled labour now ran during breakfast. That's a genuine operational improvement.</p>
+      <p>Then it starts again.</p>
     </div>
 
-    <div class="is-scenario">
-      <div class="is-scenario-head">Where It Breaks Down</div>
-      <p>Every step, every branch, every decision point — a human designed it in advance. The workflow is intelligent <strong>within its design</strong> but incapable of reasoning beyond it.</p>
-      <p>When a supplier suddenly offers a 20% discount on a product you hadn't planned to reorder, the workflow doesn't know. It follows its schedule. When demand spikes mid-week because of a social media trend, the workflow won't catch it until next Monday. When a supplier consistently delivers late but nobody updated the scoring logic — the workflow keeps routing orders to them.</p>
-      <div class="outcome">
-        <span class="outcome-label">The limitation</span>
-        <p><strong>Workflow engineering automated the process. The process itself was frozen in time.</strong> A precisely engineered machine — but one that couldn't adapt when the world changed around it.</p>
-      </div>
+    <div class="section-rule"><hr></div>
+
+    <div class="prose">
+      <h2>What This Looks Like in Practice</h2>
+      <p>Consider a hypothetical scenario: FreshRoute's top supplier — a mango farm in Ratnagiri — suffers significant crop damage from an unseasonal storm. There are fourteen days of stock remaining across eight restaurant accounts.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
-
-    <div class="is-prose">
-      <h2>Era 4: The Adaptive System</h2>
-      <h4>Loop Engineering · 2025 to Present</h4>
-
-      <p>This is where the story gets more complicated — and more interesting.</p>
-
-      <p>The concept that would become known as "loop engineering" was first articulated in mid-2025 by <strong>Geoffrey Huntley</strong>, a developer who described it as part of a broader methodology he called <strong>agentic engineering</strong> (published at ghuntley.com/loop/). His core insight was technical: LLMs degrade over long contexts, so instead of giving an agent one massive task, you wrap it in an outer loop — resetting context each cycle, maintaining state in external files, and using automated verification to keep it on track.</p>
-
-      <p>The term "loop engineering" was later popularised by <strong>Addy Osmani</strong> in June 2026, who mapped the pattern to the native capabilities of tools like Claude Code and OpenAI's Codex. Then in late June, <strong>Andrew Ng</strong> — widely regarded as the most influential voice in applied AI — published his own framework in DeepLearning.AI's newsletter, describing three nested loops for product development operating at different time scales.</p>
-
-      <p>The idea, stripped to its core: <strong>instead of designing a process, design a system that monitors, decides, acts, verifies, and learns — continuously.</strong></p>
-    </div>
-
-    <div class="is-callout">
-      <span class="is-callout-label">The six-step cycle</span>
-      <p><strong>MONITOR</strong> — Watch relevant data streams continuously, not on a fixed schedule.</p>
-      <p><strong>DETECT</strong> — Identify when something needs attention, through reasoning about patterns — not just preset thresholds.</p>
-      <p><strong>DECIDE</strong> — Determine the best action using all available context. Not a decision tree — a judgment call.</p>
-      <p><strong>ACT</strong> — Execute the decision directly into business systems.</p>
-      <p><strong>VERIFY</strong> — Check whether the action achieved the intended result.</p>
-      <p><strong>LEARN</strong> — Record the outcome and use it to inform future decisions.</p>
-    </div>
-
-    <div class="is-section-rule"><hr /></div>
-
-    <div class="is-prose">
-      <h2>The Same Crisis, Four Responses</h2>
-      <p>Consider this scenario: a key supplier in Vietnam suffers a factory fire. You have eighteen days of stock on the five affected products. Here's how each era handles it.</p>
-    </div>
-
-    <div class="is-table-wrap">
-      <span class="is-table-caption">How each era responds to the same crisis</span>
+    <div class="table-wrap">
+      <span class="table-caption">The same crisis, four responses</span>
       <table>
         <thead>
-          <tr><th>Era</th><th>What Happens</th><th>Human Time</th></tr>
+          <tr><th>Approach</th><th>What Happens</th><th>Priya's Time</th></tr>
         </thead>
         <tbody>
-          <tr><td>Automation</td><td>Nothing. There is no rule for "factory fire." Discovery comes from the news, three days later.</td><td>3+ days firefighting</td></tr>
-          <tr><td>Prompt Eng.</td><td>Someone hears the news, prompts an AI for analysis, gets a useful assessment, then spends two days manually contacting suppliers and adjusting orders.</td><td>2–3 days of execution</td></tr>
-          <tr><td>Workflow Eng.</td><td>A pre-designed "disruption" workflow activates — if one exists. It pulls affected products, checks backup suppliers, generates recommendations for review. But only if this scenario was designed in advance.</td><td>2–3 hours (if workflow exists)</td></tr>
-          <tr><td>Loop Eng.</td><td>The monitoring loop detects the disruption through news feeds, shipping anomalies, and communication patterns — possibly before official notification. It reasons through stock levels, backup capacity, and margin impact. It places backup orders, adjusts allocation, drafts communications, and updates pricing.</td><td>15 minutes reviewing a summary</td></tr>
+          <tr><td>Rules</td><td>Nothing. There's no rule for "supplier crop damage." Priya finds out when the supplier calls — or when she notices the delivery is late.</td><td>Days of firefighting</td></tr>
+          <tr><td>Prompts</td><td>Priya hears the news, asks an AI for an analysis of affected products and alternatives. Gets a useful answer. Then spends two days manually contacting backup suppliers and adjusting restaurant allocations.</td><td>2–3 days</td></tr>
+          <tr><td>Workflows</td><td>A pre-designed "supply disruption" workflow activates — if someone built one. It pulls affected products, checks a backup supplier database, and generates recommendations for Priya's review.</td><td>Hours (if the workflow exists)</td></tr>
+          <tr><td>Loops</td><td>A monitoring system detects the disruption through weather alerts, delivery tracking anomalies, and supplier portal updates. It reasons through stock levels, backup supplier capacity across three alternatives, cost implications, and which restaurants to prioritise based on order history. It places backup orders and sends allocation adjustments for Priya's one-click approval.</td><td>Minutes of review</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="is-prose">
-      <p>The critical distinction: <strong>the loop had never encountered this exact scenario before.</strong> It was not following a pre-designed path. It reasoned from first principles — using the same information a skilled supply chain professional would use, but processing it in minutes rather than days.</p>
-      <p>That said — and this is important — this specific capability is more aspirational than demonstrated at scale today. I'll address exactly what works and what doesn't in Part 2.</p>
+    <div class="prose">
+      <p>The critical thing about the last scenario — in theory — is that the system hadn't been programmed with a rule for "Ratnagiri mango storm." It reasoned from available data: weather alerts, stock levels, supplier geography, alternative sources. It handled a situation nobody had designed for.</p>
+
+      <p>In theory.</p>
+
+      <p>I want to be careful with that caveat, because the gap between what these systems can do in a demonstration and what they can reliably do in production is significant. That's a subject worth examining closely — and it's exactly what Part 2 does.</p>
     </div>
 
-    <div class="is-section-rule"><hr /></div>
+    <div class="section-rule"><hr></div>
 
-    <div class="is-prose">
-      <h2>Why Operations Is a Natural Fit for This Pattern</h2>
+    <div class="prose">
+      <h2>Why Operations Is Already a Loop</h2>
 
-      <p>Operations and supply chain management is, at its core, already a loop. Consider what any operations team does every week:</p>
+      <p>Here's the observation that makes this evolution feel inevitable rather than optional: operations and supply chain management is already structured as a loop.</p>
 
-      <ul>
-        <li><strong>Monitor</strong> demand signals and inventory positions</li>
-        <li><strong>Detect</strong> when stock is low, when a shipment is delayed, when demand shifts</li>
-        <li><strong>Decide</strong> how much to order, from whom, at what price, to which warehouse</li>
-        <li><strong>Act</strong> by placing orders, adjusting allocations, updating prices</li>
-        <li><strong>Verify</strong> by tracking deliveries, measuring stockout rates, reviewing costs</li>
-        <li><strong>Learn</strong> by assessing which decisions worked and which didn't</li>
-      </ul>
+      <p>Priya's team monitors demand. They detect when stock is low. They decide how much to order. They act by placing orders. They verify by tracking deliveries. They learn by measuring which decisions worked.</p>
 
-      <p>This loop runs hundreds of times per week at every company. The question isn't whether the loop exists — it's <strong>who's running it.</strong></p>
+      <p>This cycle runs hundreds of times per week at every company that moves physical goods. The question isn't whether the loop exists — it's who's running it.</p>
 
-      <p>At most companies, the answer is: the most experienced person. The procurement manager with twenty years of intuition. The warehouse supervisor who knows which products move slowly. The supply chain director who reads the news obsessively and worries about geopolitical risks before anyone else.</p>
+      <p>At FreshRoute, the answer is Priya and her team. They're exceptional. They're also limited by how many decisions they can make per day, prone to fatigue, and — eventually — going to move on.</p>
 
-      <p>These people are exceptional. They're also limited by how many decisions they can make per day, prone to fatigue and inconsistency, unable to process data as fast as a system can, and — eventually — going to move on, taking their expertise with them.</p>
+      <p>The promise of the fourth shift isn't to replace Priya. It's to codify her expertise — her eleven years of pattern recognition — into a system that runs continuously, so she can focus on the decisions that genuinely require her judgment. The supplier relationship negotiations. The strategic planning. The moments where context matters more than data.</p>
 
-      <p>Andrew Ng made a point in his framework that captures this perfectly:</p>
-
-      <blockquote>"So long as the human knows something the AI does not, human-in-the-loop is needed to inject that knowledge into the system."</blockquote>
-
-      <p>He calls this the human's <strong>"context advantage"</strong> — the fact that operators know things the AI doesn't: who the customer really is, what happened last quarter, what constraint isn't in any database. Loop engineering, done right, doesn't replace that knowledge. It <strong>codifies</strong> it into a system that runs continuously — freeing the operator to focus on the decisions that genuinely require their judgment.</p>
+      <p>That's the vision. But as I'll explore in Part 2, the reality is more nuanced — and more honest — than most of the conversation currently suggests.</p>
     </div>
 
-    <div class="is-pull-quote">
-      <blockquote>Every operations team runs the same loop. The ones that learn to run it with AI — not instead of humans, but alongside humans — will have an advantage that compounds every week.</blockquote>
+    <div class="pull-quote">
+      <blockquote>Every operations team runs the same loop. The ones that figure out how to run it with intelligent systems — not instead of humans, but alongside them — will have a compounding advantage. But getting that right requires understanding what actually works today, not what might work someday.</blockquote>
     </div>
 
-    <div class="is-prose">
-      <p>But — and this is the part where the conversation usually gets less careful — there are significant caveats to what loop engineering can actually do today. The gap between the vision and the reality is real, and it deserves honest examination.</p>
+    <div class="prose">
       <p>That's Part 2.</p>
     </div>
 
-    <div class="is-series-nav">
-      <h3>Series</h3>
+    <div class="ref-section">
+      <h3>Further Reading</h3>
       <ol>
-        <li class="current">From Rules to Loops: The Quiet Evolution of AI in Operations</li>
-        <li><a href="/blog/real-vs-hype" style="color:inherit;text-decoration:none">Loop Engineering: What's Real, What's Hype, and What's Unknown</a></li>
-        <li><a href="/blog/practical-ai-ops" style="color:inherit;text-decoration:none">A Practical Framework for Building Operational Loops</a></li>
+        <li>Huntley, G. (2025). <a href="https://ghuntley.com/loop/" target="_blank" rel="noopener">Agentic Engineering and the Ralph Loop</a> — the original technical framework for agent loops with external state management.</li>
+        <li>Osmani, A. (2026). <a href="https://addyosmani.com/blog/loop-engineering/" target="_blank" rel="noopener">Loop Engineering</a> — the popular articulation of the pattern mapped to Codex and Claude Code primitives.</li>
+        <li>Wiener, N. (1948). <em>Cybernetics: Or Control and Communication in the Animal and the Machine</em> — the intellectual ancestor of feedback-loop thinking.</li>
+        <li>Boyd, J. (1976). <a href="https://en.wikipedia.org/wiki/OODA_loop" target="_blank" rel="noopener">The OODA Loop</a> — observe, orient, decide, act. A military decision framework with structural similarities.</li>
       </ol>
     </div>
 
-    <div class="is-author">
-      <p>Questions or disagreements? Operations is a domain where I'm still learning — and I'd genuinely value the perspective of people who work in it every day.</p>
+    <div class="series-nav">
+      <h3>Series</h3>
+      <ol>
+        <li class="current">The Quiet Shift: How AI Operations Moved from Rules to Loops</li>
+        <li><a href="/blog/real-vs-hype" style="color:inherit;text-decoration:none">The Honest Version: Separating Loop Engineering from Its Hype</a></li>
+        <li><a href="/blog/practical-ai-ops" style="color:inherit;text-decoration:none">The Playbook: What an Operations Team Would Actually Build</a></li>
+      </ol>
+    </div>
+
+    <div class="author-block">
+      <p>I'm interested in where operations is heading. If you work in supply chain and think this framing misses something, I'd genuinely like to hear it.</p>
       <a href="mailto:contactzope@gmail.com" class="cta">Get in Touch</a>
     </div>
 
