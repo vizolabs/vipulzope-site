@@ -3,13 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import '../../styles/intelligence-stack.css';
 ---
 
-<Layout title="Real vs Hype | Vipul Zope" description="An honest assessment of loop engineering — the origins, the criticisms, what works today, and what operations leaders should actually believe.">
+<Layout title="Loop Engineering: What's Real, What's Hype, and What's Unknown | Vipul Zope" description="An honest assessment of loop engineering — the origins, the criticisms, what works today, and what operations leaders should actually believe.">
 
   <article>
 
     <header class="is-hero">
-      <h1>Real vs Hype</h1>
-      <p class="hero-sub">In Rules to Loops, the evolution. In this piece — the honest version. What loop engineering actually is, where it came from, what works, what doesn't, and what the strongest criticisms get right.</p>
+      <p class="series-label">The Intelligence Stack · <span>Part 2 of 3</span></p>
+      <h1>Loop Engineering: What's <em>Real</em>, What's <em>Hype</em>, and What's Unknown</h1>
+      <p class="hero-sub">In Part 1, the evolution. In this piece — the honest version. What loop engineering actually is, where it came from, what works, what doesn't, and what the strongest criticisms get right.</p>
       <div class="hero-meta">
         <span>12 min read</span>
         <span>July 2026</span>
@@ -56,7 +57,7 @@ import '../../styles/intelligence-stack.css';
       <p>A framing I found particularly useful from practitioners: loops work well for the <strong>repetitive, verifiable periphery</strong> of a workflow — gathering data, deduplicating sources, checking links, validating formats — while the core strategic judgment remains human. This is pragmatic, proven, and honest about where the boundary of automation should sit.</p>
 
       <h3>Ng's hierarchical loop architecture</h3>
-      <p>Ng's three-loop model (fast autonomous loop / medium human-supervised loop / slow market-validated loop) is the most credible architectural framework available. It works because it <strong>matches the level of autonomy to the level of verification clarity.</strong> Where verification is easy (code tests), the loop is autonomous. Where verification is hard (product-market fit), the loop is slow and human-supervised. This same principle applies to operations — and it's the foundation of the framework I'll propose in Practical AI Ops.</p>
+      <p>Ng's three-loop model (fast autonomous loop / medium human-supervised loop / slow market-validated loop) is the most credible architectural framework available. It works because it <strong>matches the level of autonomy to the level of verification clarity.</strong> Where verification is easy (code tests), the loop is autonomous. Where verification is hard (product-market fit), the loop is slow and human-supervised. This same principle applies to operations — and it's the foundation of the framework I'll propose in Part 3.</p>
     </div>
 
     <div class="is-section-rule"><hr /></div>
@@ -77,7 +78,7 @@ import '../../styles/intelligence-stack.css';
       <p>The honest assessment: loops can accumulate and reference prior outcomes. That's useful state management. But calling it "learning" overstates what's happening. True learning — where the system improves its decision framework based on outcomes — remains an open problem.</p>
 
       <h3>"The loop handles novel situations autonomously"</h3>
-      <p>The factory fire scenario from Rules to Loops is compelling — but I should have been clearer that this level of autonomous reasoning has <strong>not been reliably demonstrated in production at scale.</strong> Current AI models reason impressively about novel situations when given the right context. But doing so autonomously in a loop — without human validation — involves risks that practitioners consistently flag. The gap between a good demo and a reliable production system is substantial.</p>
+      <p>The factory fire scenario from Part 1 is compelling — but I should have been clearer that this level of autonomous reasoning has <strong>not been reliably demonstrated in production at scale.</strong> Current AI models reason impressively about novel situations when given the right context. But doing so autonomously in a loop — without human validation — involves risks that practitioners consistently flag. The gap between a good demo and a reliable production system is substantial.</p>
 
       <h3>"40–45% cost reduction"</h3>
       <p>The infrastructure savings are plausible for organisations with expensive, disconnected AI stacks. But the claim ignores a significant cost that practitioners are very vocal about: <strong>token consumption.</strong></p>
@@ -175,15 +176,15 @@ import '../../styles/intelligence-stack.css';
     </div>
 
     <div class="is-prose">
-      <p>In Practical AI Ops, I'll translate all of this into a practical framework: what to build, how to start, what it costs, and what to realistically expect — designed specifically for operations and supply chain contexts.</p>
+      <p>In Part 3, I'll translate all of this into a practical framework: what to build, how to start, what it costs, and what to realistically expect — designed specifically for operations and supply chain contexts.</p>
     </div>
 
     <div class="is-series-nav">
-      <h3>More from this series</h3>
+      <h3>The Intelligence Stack — Series</h3>
       <ol>
-        <li><a href="/blog/intelligence-stack-part-1" style="color:inherit;text-decoration:none">Rules to Loops</a></li>
-        <li class="current">Real vs Hype</li>
-        <li><a href="/blog/practical-ai-ops" style="color:inherit;text-decoration:none">Practical AI Ops</a></li>
+        <li><a href="/blog/intelligence-stack-part-1" style="color:inherit;text-decoration:none">From Rules to Loops: The Quiet Evolution of AI in Operations</a></li>
+        <li class="current">Loop Engineering: What's Real, What's Hype, and What's Unknown</li>
+        <li><a href="/blog/intelligence-stack-part-3" style="color:inherit;text-decoration:none">A Practical Framework for Building Operational Loops</a></li>
       </ol>
     </div>
 
