@@ -6,19 +6,16 @@ const posts = [
     url: '/blog/intelligence-stack-part-1',
     title: 'from rules to loops: the quiet evolution of ai in operations',
     date: 'Jul 2, 2026',
-    series: 'Part 1',
   },
   {
     url: '/blog/intelligence-stack-part-2',
     title: 'loop engineering: what\'s real, what\'s hype, and what\'s unknown',
     date: 'Jul 2, 2026',
-    series: 'Part 2',
   },
   {
     url: '/blog/intelligence-stack-part-3',
     title: 'a practical framework for building operational loops',
     date: 'Jul 2, 2026',
-    series: 'Part 3',
   },
 ];
 ---
@@ -35,9 +32,6 @@ const posts = [
             class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--color-border)] last:border-none no-underline group"
           >
             <div>
-              <span class="block font-mono text-[0.55rem] tracking-[0.15em] uppercase text-[var(--color-accent)] mb-1">
-                {post.series}
-              </span>
               <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
                 {post.title}
               </span>
