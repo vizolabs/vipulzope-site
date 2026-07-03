@@ -1,4 +1,4 @@
-:root{--bg:#f8f5ef;--bg-deep:#efe9dd;--surface:#fff;--ink:#1a1f36;--ink-secondary:#4a4e6a;--ink-muted:#8e91a4;--accent:#b8732a;--accent-light:#daa96a;--accent-faint:rgba(184,115,42,.07);--border:#ddd8ce;--navy:#1a1f36;--green:#3a7d44;--red:#c44b4b;--serif:'Cormorant Garamond',Georgia,serif;--body:'Source Serif 4',Georgia,serif;--mono:'DM Mono','Courier New',monospace;--max-w:680px;--wide-w:860px}
+:root{--bg:#f8f5ef;--bg-deep:#efe9dd;--surface:#fff;--ink:#1a1f36;--ink-secondary:#4a4e6a;--ink-muted:#8e91a4;--accent:#b8732a;--accent-light:#daa96a;--accent-faint:rgba(184,115,42,.07);--border:#ddd8ce;--navy:#1a1f36;--green:#3a7d44;--red:#c44b4b;--serif:'Cormorant Garamond',Georgia,serif;--body:'Source Serif 4',Georgia,serif;--mono:'DM Mono','Courier New',monospace;--max-w:800px;--wide-w:860px}
 
 .hero{margin:0 auto;padding:3rem 2rem 2rem;animation:fadeUp .7s ease forwards}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;color:var(--ink);margin-bottom:1.5rem}
