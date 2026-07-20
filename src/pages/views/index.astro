@@ -5,6 +5,21 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="My Views with Facts | Vipul Zope" locked={false}>
   <div class="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
     <h1 class="font-serif font-semibold text-[2rem] leading-[1.15] text-[var(--color-ink)] mb-8">My Views with Facts</h1>
-    <p class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-[var(--color-ink-muted)]">Coming soon.</p>
+
+    <ul class="list-none p-0">
+      <li>
+        <a
+          href="/views/im-angry-at-both"
+          class="flex items-baseline justify-between gap-4 py-4 border-b border-[var(--color-border)] no-underline group"
+        >
+          <span class="font-serif text-[1.1rem] italic text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+            i'm angry at both
+          </span>
+          <span class="font-mono text-[0.62rem] text-[var(--color-ink-muted)] tracking-[0.04em] shrink-0">
+            20 Jul 2026
+          </span>
+        </a>
+      </li>
+    </ul>
   </div>
 </Layout>
