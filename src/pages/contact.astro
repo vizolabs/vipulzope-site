@@ -21,26 +21,6 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
 
-      <div>
-        <h2 class="font-mono text-[0.7rem] font-medium tracking-[0.18em] uppercase text-[var(--color-ink-muted)] mb-2">Social</h2>
-        <ul class="list-none p-0 space-y-2">
-          {[
-            { label: 'X', url: 'https://x.com/zope_vipul' },
-            { label: 'LinkedIn', url: 'https://linkedin.com/in/vipulzope' },
-          ].map(link => (
-            <li>
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener"
-                class="font-mono text-[0.85rem] text-[var(--color-ink)] hover:text-[var(--color-accent)] no-underline transition-colors duration-200"
-              >
-                {link.label} →
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   </div>
 </Layout>
